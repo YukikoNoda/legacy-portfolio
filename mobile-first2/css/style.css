@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+/* リセットcss
+---------------------------------------- */
+html, body, h1, h2, p, ul, li {
+margin: 0;
+padding: 0;
+line-height: 1;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+text-align: center;
+}
+ul {
+list-style: none;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+img {
+display: block;
+max-width: 100%;
+height: auto;
+border: none;
+}
+*, ::before, ::after {
+box-sizing: border-box;
+}
+
+/* Header
+---------------------------------------- */
+header {
+padding: 20px 0;
+background-color: #3b0303;
+color: #fff;
+}
+h1 {
+margin-bottom: 10px;
+font-size: 40px;
+font-family: 'Pacifico', cursive;
+}
+
+/* Navigation
+---------------------------------------- */
+nav{
+position: fixed;
+top: 0;
+left:100%;
+width: 100%;
+height: 100vh;
+padding-top: 10vh;
+background: rgba(207, 118, 118, 0.8);
+transition: 300ms;
+}
+nav.slide {
+left:0;
+}
+nav li {
+line-height: calc(60vh / 5);
+font-size: 26px;
+font-weight: bold;
+text-shadow: 0 0 4px #3b0303;
+}
+nav a {
+display: block;
+}
+
+/* SP Button
+---------------------------------------- */
+.btn {
+position: fixed;
+top: 10px;
+right: 10px;
+overflow: hidden;
+height: 50px;
+width: 50px;
+font-size: 35px;
+color: #3b0303;
+border-radius: 5px;
+background:rgba(255, 255, 255, 0.7);
+box-shadow: 0px 0px 5px #3b0303;
+cursor: pointer;
+}
+.btn i {
+line-height: 50px;
+}
+.btn.open i:first-child {
+display: none;
+}
+
+/* TOP Button
+---------------------------------------- */
+.top{
+position: fixed;
+right:10px;
+bottom: 10px;
+width:50px;
+height: 50px;
+font-weight: bold;
+color:#fff;
+background:rgba(134, 34, 34, 0.6);
+border: 1px solid #3b0303;
+border-radius: 5px;
+cursor: pointer;
+}
+.top i{
+display: block;
+font-size: 25px;
+}
+
+/* Key Visual
+---------------------------------------- */
+.keyVis {
+height: 250px;
+background: url(../img/sp-keyvis.jpg) no-repeat center/cover;
+color: #fff;
+text-shadow: 0px 0px 5px #3b0303;
+}
+.keyVis p {
+padding: 50px 0 30px;
+font-size: 64px;
+font-family: 'Pacifico', cursive;
+}
+.keyVis i {
+font-size: 50px;
+}
+.keyVis a + a {
+padding-left: 15px;
+}
+
+/* Main Content
+---------------------------------------- */
+main {
+padding: 30px 3% 0;
+}
+main section {
+margin-bottom: 30px;
+}
+main h2 {
+margin-bottom: 10px;
+color: #8f2222;
+font-size: 30px;
+font-family: 'Pacifico', cursive;
+}
+main img {
+margin: 0 auto 10px;
+}
+main a p:first-of-type {
+margin-bottom: 15px;
+text-align: left;
+line-height: 1.7;
+}
+/* ----- 詳細を見る -----*/
+main .more {
+padding: 15px 0;
+border-radius: 10px;
+background: linear-gradient(#c07272,#8f2222);
+color: #fff;
+font-weight: bold;
+}
+main .more i {
+padding-right: 8px;
+font-size: 20px;
+  vertical-align: middle;
+}
+
+/* MAP
+---------------------------------------- */
+.g-map {
+height: 400px;
+}
+.map {
+width: 100%;
+height: 100%;
+border: none;
+}
+
+/* Footer
+---------------------------------------- */
+footer {
+padding: 20px 0;
+background-color: #8f2222;
+color: #fff;
+}
+
+/* ****************************************
+  Media Query
+**************************************** */
+@media screen and (min-width: 768px) {
+
+.container {
+display: flex;
+justify-content: space-between;
+max-width: 960px;
+margin: 0 auto;
+}
+
+  /* Header
+---------------------------------------- */
+header .container {
+align-items: flex-end;
+padding: 30px 3%;
+}
+header h1 {
+margin-bottom: 20px;
+}
+
+  /* Navigation
+---------------------------------------- */
+nav{
+position: static;
+width: 50%;
+height: auto;
+padding-top: 0;
+background: none;
+transition: 300ms;
+}
+nav.slide {
+left:0;
+}
+nav ul {
+display: flex;
+justify-content: flex-end;
+}
+nav li + li {
+padding-left: 10px;
+}
+nav li {
+line-height: 1;
+font-size: 16px;
+text-shadow: none;
+}
+nav a {
+padding: 0 0 0 20px
+}
+nav a:hover {
+background: url(../img/gif-anim.gif) no-repeat;
+background-size: 14px;
+}
+
+/* SP Button
+---------------------------------------- */
+.btn {
+display: none;
+}
+
+/* Key Visual
+---------------------------------------- */
+.keyVis {
+height: 400px;
+background: url(../img/pc-keyvis.jpg) no-repeat center/cover;
+}
+.keyVis p {
+padding: 100px 0 50px;
+}
+.keyVis a {
+transition: 300ms;
+}
+.keyVis a:hover {
+  color: #d68c8c;
+}
+
+
+  /* Main Content
+---------------------------------------- */
+main.container {
+padding: 50px 0;
+}
+main section {
+width: calc(100% / 3);
+margin-bottom: 0;
+padding: 10px;
+text-align: left;
+transition: 300ms;
+}
+main section:hover {
+  border-radius: 5px;
+ background-color: #d68c8c;
+}
+main h2 {
+text-align: left;
+}
+
+main img {
+object-fit: cover;
+height: 200px;
+}
+
+/* ----- 詳細を見る -----*/
+main .more {
+display: inline-block;
+padding: 10px;
+border: 1px solid #8f2222;
+background: none;
+color: #8f2222;
+transition: 300ms;
+}
+main .more:hover{
+background: #8f2222;
+color: #fff;
+}
+
+
+/* Footer
+---------------------------------------- */
+footer {
+padding: 30px 0;
+}
+}

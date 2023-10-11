@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/* リセットCSS
+---------------------------------------- */
+html, body, h1, h2, p, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: Meiryo, "Hiragino Kaku Gothic ProN", Yu Gothic, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* 共通CSS
+---------------------------------------- */
+.container {
+  max-width: 710px;
+  margin: auto;
+}
+
+/* Header
+---------------------------------------- */
+.header {
+  margin-bottom: 15px;
+}
+
+/* Main Content
+---------------------------------------- */
+.main {
+  padding: 0 20px;
+
+  .section {
+    padding: 10px;
+    background: url(../images/pattern.gif);
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+
+    .ph {
+      width: 240px;
+      border: 2px solid #ff7d73;
+      align-self: flex-start;
+    }
+    
+    &:nth-of-type(even) .ph {
+      order: -1;
+    }
+
+    .inner-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px 20px;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+
+
+      .section-title {
+        order: -2;
+        margin-bottom: 10px;
+        padding: 5px 6px;
+        background-color: #ff7d73;
+        border-radius: 4px;
+
+        h2 {
+          padding-top: 4px;
+          border-left: 5px solid #ffe073;
+
+          a {
+            display: block;
+            margin-left: 10px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: 2px;
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.3;
+            letter-spacing: 0.05px;
+
+            &:hover {
+              text-decoration-color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+      
+      .inner-content {
+        width: calc(100% - 250px);
+        margin-bottom: 25px;
+
+        .price {
+          text-align: right;
+          margin-bottom: 12px;
+
+          p {
+            &:first-child {
+              margin-bottom: 4px;
+              font-size: 16px;
+              font-weight: bold;
+              letter-spacing: 0.05px;
+
+              .num {
+                padding-left: 12px;
+                color: #f00;
+                font-size: 38px;
+                letter-spacing: 0.025px;
+              }
+
+              .unit {
+                color: #f00;
+                font-size: 18px;
+                letter-spacing: 0.025px;
+              }
+            }
+
+            &:last-child {
+              font-size: 11px;
+              line-height: 1.18;
+              letter-spacing: 0.05px;
+            }
+          }
+        }
+
+        .point {
+          display: flex;
+          margin-bottom: 12px;
+          background-color: #ff7d73;
+          font-weight: bold;
+
+          dt {
+            align-self: center;
+            width: 70px;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+          }
+
+          dd {
+            width: calc(100% - 70px);
+            padding: 5px;
+            background-color: #fff0b9;
+            color: #ff7d73;
+            font-size: 16px;
+          }
+        }
+
+        .point-content {
+          li {
+            position: relative;
+            margin-bottom: 1em;
+            padding-left: 1em;
+            font-size: 13px;
+            line-height: 1.3;
+            letter-spacing: 0.07px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 2.5px;
+              width: 8px;
+              height: 8px;
+              background-color: #ff7d73;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      .more {
+        width: 240px;
+        line-height: 40px;
+        margin: 0 auto;
+        background: url(../images/more.jpg) no-repeat center/cover;
+        text-align: center;
+        transition: 300ms;
+        
+        &:hover {
+          opacity: 0.7;
+        }
+        
+        a {
+          display: block;
+          color: #fff;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 0.05px;
+        }
+      }
+    }
+  }
+
+/* Footer
+---------------------------------------- */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+
+  .btn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 30px;
+    background-color: #ffcbc7;
+    transition: 300ms;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ff7d73;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      border-right: 7px solid transparent;
+      border-bottom: 13px solid #fff;
+      border-left: 7px solid transparent;
+    }
+  }
+}

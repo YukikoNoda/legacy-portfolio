@@ -1,0 +1,720 @@
+@charset "utf-8";
+
+/* リセットCSS
+---------------------------------------- */
+html, body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* 共通css
+---------------------------------------- */
+.container {
+  max-width: 1020px;
+  padding: 0 3%;
+  margin: 0 auto;
+}
+
+
+/* Header
+---------------------------------------- */
+.header {
+  height: 100vh;
+  background: url(../img/image01.jpg) no-repeat center/cover;
+  color: #fff;
+  text-align: center;
+}
+
+.headerTop {
+  position: fixed;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #219EBC;
+  box-shadow: 0 5px 10px #023047;
+  z-index: 1;
+}
+
+.headerTop .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: 'Great Vibes', cursive;
+}
+
+h1 span {
+  color: #FD9E02;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #774107;
+}
+
+/* Navigation
+---------------------------------------- */
+.g-nav ul {
+  display: flex;
+}
+
+.g-nav li {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.g-nav li:first-child {
+  color: #fc5;
+}
+
+.g-nav li + li {
+  margin-left: 20px;
+}
+
+.g-nav a {
+  display: block;
+  padding: 5px 0;
+  transition: 300ms;
+}
+
+.g-nav a:hover {
+  color: #fc0;
+}
+
+/* ---------- nav underline ---------- */
+.g-nav a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 2px;
+  background: #fc0;
+  transform: scaleX(0);
+  transition: 300ms;
+}
+
+.g-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.g-nav .current:hover::after {
+  transform: scaleX(0);
+}
+
+
+/* Copy
+---------------------------------------- */
+.copy {
+  padding-top: 30vh;
+  color: #FFB703;
+  text-shadow: 2px 2px 2px #fff, 3px 3px 3px #774107;
+}
+
+.copy p:first-child {
+  font-size: 80px;
+  margin-bottom: 40px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.copy p:last-child {
+  font-size: 60px;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Start Button
+---------------------------------------- */
+.start {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 20vh;
+  width: 300px;
+  line-height: 50px;
+  margin: auto;
+  border-radius: 10px;
+  background: #126782;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.start:hover {
+  background: #a30;
+}
+
+.start i {
+  padding-right: 10px;
+  transition: 300ms;
+}
+
+.start:hover i {
+  color: #fc0;
+  transform: scale(1.3) rotate(360deg);
+}
+
+/* Down arrow
+---------------------------------------- */
+.arrow i {
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 10vh;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  color: #ffb703;
+  font-size: 50px;
+  cursor: pointer;
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* SNS icons
+---------------------------------------- */
+.sns {
+  position: fixed;
+  right: 30px;
+  bottom: 15vh;
+  z-index: 1;
+}
+
+.sns i {
+  display: block;
+  margin-bottom: 20px;
+  color: #023047;
+  font-size: 35px;
+  transition: 300ms;
+}
+
+.sns i:hover {
+  transform: rotate(360deg) scale(1.5);
+}
+
+.sns a:nth-child(1):hover i {
+  color: #2e3192;
+}
+
+.sns a:nth-child(2):hover i {
+  color: #29abe2;
+}
+
+.sns a:nth-child(3):hover i {
+  background: radial-gradient(circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Service / Tour / SiteMap 共通
+---------------------------------------- */
+.service, .tour, .smap {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.service .container, .tour .container, .smap .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  color: #03b3f9;
+  font-size: 3em;
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 4px;
+}
+
+h2 i {
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+
+.service h2::after, .tour h2::after, .smap h2::after {
+  display: block;
+  font-size: 0.3em;
+  letter-spacing: normal;
+  margin: 15px 0 50px;
+}
+
+/* 疑似要素content */
+.service h2::after {
+  content: "信頼できるサービスをご提供します";
+}
+
+.tour h2::after {
+  content: "最新ツアー情報、話題の観光地をいち早くお届けします。";
+}
+
+.smap h2::after {
+  content: "ご希望の項目をクリックして閲覧してください。"
+}
+
+/* Service
+---------------------------------------- */
+.service .container section {
+  width: calc(100% / 3);
+}
+
+.service a {
+  display: block;
+}
+
+.service .container i {
+  display: block;
+  width: 200px;
+  line-height: 200px;
+  margin: 0 auto 30px;
+  border: 1px solid #03b3f9;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #03b3f9;
+  font-size: 40px;
+  transition: 300ms;
+}
+
+.service a:hover i {
+  background: #03b3f9;
+  color: #fff;
+  transform: rotate(360deg) scale(1.2);
+}
+
+.service h3 {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.service p {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Tour Info
+---------------------------------------- */
+.tour {
+  background-color: #e2f6ff;
+}
+
+.tour section {
+  width: 23%;
+}
+
+.tour a {
+  display: block;
+  background-color: #fff;
+  transition: 300ms;
+}
+
+.tour img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: 300ms;
+}
+
+.tour a > p {
+  overflow: hidden;
+}
+
+.tour a:hover {
+  background-color: #dff;
+  box-shadow: 0 0 20px #03b3f9;
+}
+
+.tour a:hover img {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.txt {
+  padding: 20px;
+}
+
+.txt h3 {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+.txt p:first-of-type {
+  height: 11em;
+  text-align: left;
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+
+.more {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #03b3f9;
+  color: #fff;
+}
+
+/* Pamphlet
+---------------------------------------- */
+.pamph {
+  padding: 150px 0;
+  background: url(../img/bg-image.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+.pamph .more {
+  width: 15em;
+  margin: auto;
+  background-color: transparent;
+  text-align: center;
+}
+
+.pamph i {
+  padding-right: 15px;
+  transition: 300ms;
+}
+
+.pamph a {
+  display: block;
+  padding: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 5px #111;
+  border-radius: 5px;
+  text-shadow: 0px 0px 5px #3d1f00, 0px 0px 5px #3d1f00;
+  letter-spacing: 5px;
+  transition: 300ms;
+}
+
+.pamph a:hover {
+  background-color: rgba(221, 238, 255, 0.5);
+}
+
+.pamph a:hover i {
+  transform: rotate(-360deg) scale(1.5);
+  color: #fc0;
+}
+
+/* Site Map
+---------------------------------------- */
+.smap .container {
+  text-align: left;
+}
+
+.smap section {
+  width: 20%;
+  font-size: 14px;
+}
+
+.smap li {
+  line-height: 1.7;
+  /* 下線の長さの調整 */
+  width: fit-content;
+}
+
+/* ---------- Site Map underline ---------- */
+.smap a:hover {
+  color: #03b3f9;
+}
+
+.smap a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: 2px;
+  background-color: #03b3f9;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 300ms;
+}
+
+.smap a:hover::after {
+  transform: scaleX(1);
+}
+
+.smap .current:hover::after {
+  transform: scaleX(0);
+}
+
+
+/* Footer
+---------------------------------------- */
+.footer {
+  padding: 40px 0;
+  background-color: #e2f6ff;
+  text-align: center;
+}
+
+/* TOP Button
+---------------------------------------- */
+.top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: rgba(3, 179, 249, 0.6);
+  box-shadow: 1px 1px 3px #111;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.top i {
+  display: block;
+  font-size: 25px;
+}
+
+
+/* ============================== 
+Media Query
+============================== */
+@media screen and (max-width: 1000px) {
+
+  .tour .container {
+    flex-wrap: wrap;
+  }
+
+  .tour section {
+    width: 49%;
+  }
+
+  .tour section:nth-child(-n+2) {
+    margin-bottom: 20px;
+  }
+
+  .tour img {
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+/* ========================================
+======================================== */
+@media screen and (max-width: 767px) {
+
+  /* Header
+---------------------------------------- */
+  .headerTop .container {
+    justify-content: center;
+  }
+
+  /* Navigation
+---------------------------------------- */
+  /* Sp menu */
+  .g-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 100, 0, 0.8);
+    transition: 300ms;
+  }
+
+  .g-nav ul {
+    display: block;
+  }
+
+  .fade {
+    display: block;
+  }
+
+  .g-nav li {
+    line-height: calc(80vh / 5);
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .g-nav li + li {
+    margin-left: 0;
+  }
+
+  .g-nav a {
+    display: block;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .g-nav a:hover {
+    color: #fff;
+  }
+
+  /* ---------- nav underline ---------- */
+  .g-nav a:hover::after {
+    transform: scaleX(0);
+  }
+
+  /* SP Button */
+  .btn {
+    position: fixed;
+    top: 10px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 6;
+  }
+
+  .btn span, .btn span::before, .btn span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 300ms;
+  }
+
+  .btn span::before {
+    transform: translateY(-10px);
+  }
+
+  .btn span::after {
+    transform: translateY(10px);
+  }
+
+  /*クラス名closeがついた時のCSS*/
+  .close span {
+    background-color: transparent;
+  }
+  .close span::before {
+    transform: rotate(225deg);
+  }
+  .close span::after {
+    transform: rotate(-225deg);
+  }
+
+  /* Copy
+---------------------------------------- */
+  .copy {
+    padding-top: 20vh;
+  }
+
+  .copy p:first-child {
+    margin-bottom: 40px;
+    font-size: 60px;
+  }
+
+  .copy p:last-child {
+    font-size: 40px;
+  }
+
+  /* SNS icons
+---------------------------------------- */
+  .sns {
+    right: 10px;
+    bottom: 70px;
+  }
+
+  /* Service/Tour共通
+---------------------------------------- */
+  .service, .tour, .smap {
+    padding: 30px 0;
+  }
+
+  .service h2::after, .tour h2::after, .smap h2::after {
+    margin-bottom: 20px;
+  }
+
+  /* Service
+---------------------------------------- */
+  .service .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service .container section {
+    width: auto;
+    padding: 20px;
+    background-color: #03b3f9;
+    border-radius: 20px;
+  }
+
+  .service h3 {
+    color: #fff;
+  }
+
+  .service a:hover i {
+    background-color: #fff;
+    color: #03b3f9;
+  }
+
+  .service p {
+    max-width: 400px;
+    color: #fff;
+  }
+
+  /* Pamphlet
+---------------------------------------- */
+  .pamph {
+    padding: 50px 0;
+  }
+
+  /* Site Map
+---------------------------------------- */
+  .smap {
+    display: none;
+  }
+}
+
+
+/* ========================================
+======================================== */
+@media screen and (max-width: 767px) {
+
+  /* Tour Info
+---------------------------------------- */
+  .tour section {
+    width: auto;
+  }
+  
+  .tour img {
+    height: 200px;
+  }
+}

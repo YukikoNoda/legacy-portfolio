@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, h3, p, ol, li, dl, dt, dd {
+  margin:0;
+  padding:0;
+  line-height:1;
+  font-family:"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+a{
+  text-decoration:none;
+}
+img{
+  max-width:100%;
+  height:auto;
+  border:none;
+  vertical-align:bottom;
+}
+
+/* ---------- 共通css ---------- */
+body {
+  background-color: #f4f9ff;
+  color: #333;
+  font-size: 0.875rem;
+}
+header, .index {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+header {
+  padding: 60px 10px 0;
+}
+header h1 {
+  width: 160px;
+  margin-bottom: 15px;
+}
+header h1 a {
+  display: block;
+}
+
+/* ---------- Main Visual ---------- */
+.mainVis {
+  height: 150px;
+  margin: 0 10px 60px;
+  background: url(http://placehold.jp/400x150.png) no-repeat center;
+}
+
+/* ********** Main Content ********** */
+main h2 {
+  margin-bottom: 10px;
+}
+
+/* ---------- Index ---------- */
+.index {
+  background-color: #fff;
+  padding: 30px 0;
+  margin-bottom: 60px;
+}
+.index ol {
+  padding-left: 30px;
+}
+.index li + li {
+  margin-top: 20px;
+}
+.index li {
+  line-height: 1.6;
+}
+
+/* ---------- Detail ---------- */
+.detail {
+  margin-bottom: 100px;
+}
+.detail .image {
+  height: 300px;
+  margin-bottom: 20px;
+  background: url(http://placehold.jp/300x300.png) no-repeat center;
+}
+.detail h3 {
+  margin-bottom: 20px;
+}
+.detail .detail-item dl {
+  display: flex;      /* dt、ddを横並びにする */
+  flex-wrap: wrap;    /* dtとddが100%になったら、横並びを折り返す */
+  margin-bottom: 20px;
+  padding: 16px 0;
+  border-top: solid 1px #dedede;
+  border-bottom: solid 1px #dedede;
+}
+.detail .detail-item dt {
+  width: 25%;
+  line-height: 1.5;
+}
+.detail .detail-item dd {
+  width: 75%;
+  line-height: 1.5;
+}
+.detail .detail-item  p {
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.detail .detail-item .link {
+  color: #333;
+  font-size: 13px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 15px 0;
+}
+
+
+/* ********** Media Query ********** */
+@media screen and (min-width:768px) {
+
+  /* 共通css */
+  header, .index {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Main Visual */
+  .mainVis {
+    height: 400px;
+    background: url(http://placehold.jp/1000x400.png) no-repeat center;
+  }
+
+  /* ********** Main Content ********** */
+  .index {
+    margin-bottom: 60px;
+  }
+  .detail .detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .detail .image {
+    width: 47%;
+  }
+  .detail .text {
+    width: 47%;
+  }
+  .detail .detail-item .link:hover {
+    opacity: 0.8;
+  }
+}

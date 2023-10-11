@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, ul,li, dl, dt, dd {
+  margin:0;
+  padding:0;
+  line-height:1;
+  font-family:"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul{
+  list-style:none;
+}
+
+/* ---------- 共通css ---------- */
+body {
+  background-color: #fffbef;
+}
+.container {
+  max-width: 960px;
+  padding: 0 30px;
+  margin: 100px auto;
+}
+h1 {
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+li {
+  border-top: solid 1px #000;
+}
+li:last-child {
+  border-bottom: solid 1px #000;
+}
+h2 {
+  position: relative;
+  padding: 30px 10px;
+  font-size: 22px;
+  transition: .5s;
+  cursor:pointer;
+}
+h2:hover {
+  background-color: #ffda5f;
+}
+/*アイコン「＋」の設定
+beforeが横棒、afterが縦棒*/
+h2::before,
+h2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 20px;
+  height: 1px;
+  background: #000;
+  transform: translateY(-50%);
+}
+/* afterが縦棒 */
+h2::after {
+  transform: translateY(-50%) rotate(90deg);
+  transition: .5s;
+}
+
+
+/* メニューが開いている場合 */
+h2.open {
+  background-color: #ffda5f;
+}
+h2.open::before {
+  /* 横棒を非表示 */
+  opacity: 0;
+}
+h2.open::after {
+  /* 縦棒を横向きに回転 */
+  transform: rotate(180deg);
+}
+/*コンテンツ部分は、「display: none;」で最初は非表示。
+クリック時にjQueryの「  $(this).next().slideToggle();」で表示に切り替え*/
+.detail {
+  display: none;
+}
+dl {
+  padding: 35px 20px; 
+  border-top: solid 1px #ccc;
+}
+dt {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+dd {
+  padding-left: 10px;
+}
+
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (min-width:768px) {
+
+  .detail {
+    display: none;
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px 30px;
+  }
+  dt {
+    width: 20%;
+    margin-bottom: 40px;
+  }
+  dd {
+    width: 80%;
+    padding: 0;
+  }
+}

@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/* リセットcss
+---------------------------------------- */
+html, body, h1, h2, p, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* Header
+---------------------------------------- */
+.header {
+  height: 300px;
+  background: url(../img/header.jpg) no-repeat center;
+}
+.header h1{
+ padding: 250px 0 0 500px;
+ text-align: center;
+ color:#fff;
+}
+
+/* Navigation
+---------------------------------------- */
+.g-nav{
+ position: sticky;
+ top:0;
+ background: #fff;
+}
+.g-nav.scroll{
+box-shadow: 0 5px 15px 0px #b3b3b3;
+}
+.g-nav ul{
+ display: flex;
+ justify-content: center;
+}
+.g-nav ul li{
+ width: calc( 800px / 5);
+ text-align: center;
+}
+.g-nav li a{ 
+ text-align: center;
+ line-height: 50px;
+ color:#000;
+ font-weight: bold;
+}
+.g-nav li a:hover{
+ border-bottom: 3px solid #720909;
+}
+
+/* ----------------------------------------
+  Main Content
+---------------------------------------- */
+.contents{
+ margin: 140px auto;
+}
+.contents h2{
+ margin-bottom: 50px;
+ text-align: center;
+}
+
+/* News
+---------------------------------------- */
+.news .news-wrap{
+ display: flex;
+ justify-content: space-between;
+ max-width: 800px;
+ margin: auto;
+ gap:30px;
+}
+.news-wrap dl{
+ max-width: 60%;
+ width: 100%;
+ overflow: hidden;
+}
+.news-wrap dt,.news-wrap dd{
+ padding-bottom: 10px;
+ margin-bottom: 40px;
+ font-size: 18px;
+ color:#720909;
+ border-bottom:2px solid #720909;
+}
+.news-wrap dt{
+ float:left;
+ margin-right: 20px;
+}
+.g-calender{
+ height: 400px;
+}
+.calender {
+ width: 100%;
+ height: 100%;
+ border: 1px solid #ddd;
+}
+
+
+/* Menu
+---------------------------------------- */
+.menu .menu-image{
+ display: flex;
+ justify-content: center;
+ gap:30px;
+}
+.menu .menu-image p{
+ max-width: 300px;
+}
+/* Map
+---------------------------------------- */
+.map .g-map{
+ max-width: 900px;
+ height: 500px;
+ margin: auto;
+}
+.g-map iframe{
+ width: 100%;
+ height: 100%;
+}
+/* Reserve form
+---------------------------------------- */
+.form .g-form{
+ max-width: 700px;
+ height: 1050px;
+ margin: auto;
+}
+.g-form iframe{
+ width: 100%;
+ height: 100%;
+ border:none;
+}
+
+/* Footer
+---------------------------------------- */
+.footer{
+ padding: 30px 0 60px;
+ text-align: center;
+ background: #720909;
+}
+.footer p{
+ color:#fff;
+}

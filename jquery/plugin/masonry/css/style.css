@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* 共通css */
+body {
+background: #ccc;
+}
+ul {
+list-style: none;
+}
+.box {
+margin: 10px;
+border-radius: 10px;
+background :#fff;
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+}
+
+.boxA {
+width: 180px;
+height: 180px;
+line-height: 180px;
+}
+.boxB {
+width: 180px;
+height: 380px;
+line-height: 380px;
+}
+.boxC {
+width: 380px;
+height: 180px;
+line-height: 180px;
+}
+.boxD {
+width: 380px;
+height: 380px;
+line-height: 380px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>PETSHOP：ペット屋</title>
+  <meta name="description" content="PETSHOP：ペット屋ではあらゆるペットと出会えます。秋田犬、三毛猫、パンダ等皆様をお待ちしておりますので、是非ご相談下さい。">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1><span>PETSHOP</span>：ペット屋</h1>
+      <p>あらゆるペットと出会えます。是非ご相談下さい。</p>
+    </header>
+
+    <!-- Hamburger -->
+    <div class="btn"><i class="fas fa-bars"></i></div>
+    
+    <!-- Navigation -->
+    <nav class="pcnav spnav">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">DOG</a></li>
+        <li><a href="#">CAT</a></li>
+        <li><a href="#">その他のペット</a></li>
+        <li><a href="#">お問合せ</a></li>
+      </ul>
+    </nav>
+
+    <!-- Key Visual -->
+    <p><img class="keyVis" src="img/petshop.jpg" alt="ペット屋の動物一覧画像"></p>
+
+    <!-- Main Contents -->
+    <main>
+      <section>
+        <h2>秋田犬</h2>
+        <img src="img/akita.jpg" alt="秋田犬の画像">
+        <p class="intro">県原産の日本犬の一種。国の天然記念物に指定されています。日本犬種のうち唯一の大型犬種です。</p>
+        <p><a href="#" class="more">詳細を見る</a></p>
+      </section>
+
+      <section>
+        <h2>三毛猫</h2>
+        <img src="img/mike.jpg" alt="三毛猫の画像">
+        <p class="intro">一般的に白・茶色・黒の3色で短毛の日本猫です。白・茶色・こげ茶のものを「キジ三毛」、縞模様（トラネコ）との混合のものを「縞三毛（しまみけ）」と特に分けて呼ぶことがあります。</p>
+        <p><a href="#" class="more">詳細を見る</a></p>
+      </section>
+
+      <section>
+        <h2>パンダ</h2>
+        <img src="img/panda.jpg" alt="パンダの画像">
+        <p class="intro">ネコ目（食肉目）に属するジャイアントパンダ（クマ科）とレッサーパンダ（レッサーパンダ科）の2種の総称です。熊猫（シュウマオ）とも。ただし単にパンダといった場合、ジャイアントパンダのことを指すことが多いようです。</p>
+        <p><a href="#" class="more">詳細を見る</a></p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p><small>Copyright &copy; PETSHOP:ペット屋 All rights koreserved.</small></p>
+    </footer>
+  </div><!-- /.container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $('.btn').on('click', function(){
+      $('.spnav').slideToggle();
+    });
+  </script>
+</body>
+
+</html>

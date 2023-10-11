@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>confirmダイアログ</title>
+</head>
+
+<body>
+<h1>confirmダイアログ</h1>
+<button onclick="view()">ダイアログを表示</button>
+
+<script>
+function view(){
+  // confirmダイアログ
+  const answer = confirm('今日の朝ごはんは食べましたか？');
+  // console.log(answer);
+
+  // 答えの反応を用意する
+  if (answer === true){
+    alert('はい、食べました');
+  }else{
+    alert('いいえ、食べていません');}
+}
+
+</script>
+</body>
+
+</html>

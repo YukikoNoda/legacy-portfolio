@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スライドアニメーション</title>
+
+  <style>
+    html, body, h1, ul, li {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    ul {
+      list-style: none;
+    }
+    html {
+      overflow-y: scroll;
+    }
+
+    /* .container
+---------------------------------- */
+    .container {
+      width: 400px;
+      margin: 50px auto;
+    }
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    li {
+      width: 100px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+    li:hover {
+      background: rgb(231, 192, 192);
+      cursor: pointer;
+    }
+    .box {
+      height: 400px;
+      background: rgb(255, 186, 57);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>slide練習</h1>
+    <ul>
+      <li class="up">slideUp</li>
+      <li class="down">slideDown</li>
+      <li class="toggle">slideToggle</li>
+    </ul>
+
+    <div class="box"></div>
+
+  </div><!-- /.container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      // slideUp
+      $('.up').on('click', function () {
+        $('.box').slideUp();
+      });
+
+      // slideDown
+      $('.down').on('click', function () {
+        $('.box').slideDown();
+      });
+
+      // slideToggle  ※:not(:animated)、動いているときは機能しない
+      $('.toggle').on('click', function () {
+        $('.box:not(:animated)').slideToggle();
+      });
+    });
+  </script>
+</body>
+
+</html>

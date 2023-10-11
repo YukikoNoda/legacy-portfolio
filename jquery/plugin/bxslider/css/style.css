@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* リセットcss */
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+/* -------------------- */
+.content {
+  max-width: 960px;
+  margin: 100px auto;
+}

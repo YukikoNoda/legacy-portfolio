@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQueryでのclickイベント</title>
+
+  <style>
+    html, body, h1, ul, li {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    ul {
+      list-style: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: bottom;
+      border: none;
+    }
+
+    /* container 
+----------------------------*/
+    .container {
+      width: 500px;
+      margin: 50px auto;
+    }
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+    li {
+      width: 120px;
+      line-height: 50px;
+      text-align: center;
+    }
+    .image {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>jQueryでのクリックイベント</h1>
+
+    <ul>
+      <li class="img01"><img src="img/image01.jpg" alt="画像"></li>
+      <li class="img02"><img src="img/image02.jpg" alt="画像"></li>
+      <li class="img03"><img src="img/image03.jpg" alt="画像"></li>
+    </ul>
+
+    <div class="image"></div><!-- /.image -->
+
+  </div><!-- /.container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+
+      // .img01をclickした際の処理
+      $('.img01').on('click', function () {
+        // .imageの間にimgタグが入る
+        $('.image').html('<img src="img/image01.jpg" alt="画像">');
+      });
+
+      // .img02をclickした際の処理
+      $('.img02').on('click', function () {
+        $('.image').html('<img src="img/image02.jpg" alt="画像">');
+      });
+
+      // .img03をclickした際の処理
+      $('.img03').on('click', function () {
+        $('.image').html('<img src="img/image03.jpg" alt="画像">');
+      });
+    });
+  </script>
+</body>
+
+</html>

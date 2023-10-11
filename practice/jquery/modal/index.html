@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>プラグインなしモーダルウィンドウ</title>
+  <meta name="description" content="プラグインなしモーダルウィンドウの練習">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>モーダルウィンドウ(プラグインなし)</h1>
+    <!-- モーダル１++++++++++ -->
+    <!-- data属性:任意に付与することができる属性(カスタム属性)、JavaScriptで使うための名前 -->
+    <a href="" class="md-btn" data-target="modal01">クリックしてモーダル1を開く</a>
+    <div id="modal01" class="modal">
+      <div class="md-overlay md-close"></div>
+
+      <!-- モーダル表示内容 -->
+      <div class="md-contents">
+        <!-- モーダル表示中の「×」アイコン -->
+        <a class="md-xmark md-close">
+          <span></span>
+          <span></span>
+        </a>
+        <div class="md-inner">
+          <p>モーダル1が表示されます</p>
+          <div class="image"><img src="http://placehold.jp/400x300.png?text=image1"></div><!-- /.image -->
+        </div><!-- /.md-inner -->
+      </div><!-- /.md-contents -->
+    </div><!-- /#modal01 .modal -->
+
+
+    <!-- モーダル2++++++++++ -->
+    <a href="" class="md-btn" data-target="modal02">クリックしてモーダル2を開く</a>
+    <div id="modal02" class="modal">
+      <div class="md-overlay md-close"></div>
+
+      <!-- モーダル表示内容 -->
+      <div class="md-contents">
+        <!-- モーダル表示中の「×」アイコン -->
+        <a class="md-xmark md-close">
+          <span></span>
+          <span></span>
+        </a>
+        <div class="md-inner">
+          <p>モーダル2が表示されます</p>
+          <div class="image"><img src="http://placehold.jp/400x300.png?text=image2"></div><!-- /.image -->
+        </div><!-- /.md-inner -->
+      </div><!-- /.md-contents -->
+    </div><!-- /#modal02 .modal -->
+  </div><!-- /.container -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+
+      $(".md-btn").on('click', function (e) {
+        // event の Default の動作を prevent する（妨げる）
+        // aのリンク先へ行かないようにする
+        e.preventDefault();
+        const target = $(this).data('target');
+        const modal = document.getElementById(target);
+        // md-overlay：モーダル表示中の背景、md-contents：モーダル表示の内容
+        // .find('クラス名') クラス名がついている要素を探す
+        $(modal).find('.md-overlay,.md-contents').fadeIn();
+      });
+
+      $('.md-close').on('click', function () {
+        $('.md-overlay,.md-contents').fadeOut();
+      });
+
+    });
+  </script>
+</body>
+
+</html>

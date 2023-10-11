@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>画像をランダムに表示</title>
+</head>
+
+<body>
+  <h1>画像をランダムに表示</h1>
+  <p id="ans">ここに画像を表示</p>
+
+  <script>
+    const num = 5;
+    const rnd = Math.floor(Math.random()*num) + 1;
+    const element = document.getElementById('ans');
+    element.innerHTML = `<img src="img/1${rnd}.jpg" alt="${rnd}">`;
+    console.log(rnd);
+  </script>
+</body>
+
+</html>

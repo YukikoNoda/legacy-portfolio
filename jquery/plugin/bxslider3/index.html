@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bxSlider演習3</title>
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>bxSlider演習3</h1>
+    <ul class="slide">
+      <li class="image01"></li>
+      <li class="image02"></li>
+      <li class="image03"></li>
+      <li class="image04"></li>
+    </ul>
+
+  </div><!-- ./container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script>
+    $(function () {
+      // bxSlider
+      $('.slide').bxSlider({
+        'mode':'fade', //切り替え（デフォルト横:horizontal）
+        'auto': true, // 自動再生
+        'controls': false, //左右の矢印が消える
+        'pager': false, //ページ
+        'speed': 500 //速度
+      });
+    });
+  </script>
+
+</body>
+
+</html>

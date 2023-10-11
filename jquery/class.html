@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQueryでclass名をコントロール</title>
+
+  <style>
+    html, body, h1, ul, li {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    ul {
+      list-style: none;
+    }
+
+    /* container 
+----------------------------*/
+    .container {
+      width: 500px;
+      margin: 50px auto;
+    }
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      width: 100px;
+      line-height: 50px;
+      border: 1px solid #000;
+      text-align: center;
+    }
+    .box {
+      height: 400px;
+      margin-bottom: 30px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+    .red-box {
+      background: #f00;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>jQueryでclass名をコントロール</h1>
+
+    <div class="box"></div>
+
+    <ul>
+      <li class="add">追加</li>
+      <li class="remove">外す</li>
+      <li class="toggle">toggle</li>
+    </ul>
+  </div><!-- /.container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      // liをクリックしたらboxの色が変わる
+
+      // .addをclickした際の処理
+      $('.add').on('click', function () {
+        // クリックした際の動作を記述
+        $('.box').addClass('red-box');
+      });
+
+      // .removeをclickした際の処理
+      $('.remove').on('click', function () {
+        // クリックした際の動作を記述
+        $('.box').removeClass('red-box');
+      });
+      
+      // .toggleをclickした際の処理
+      $('.toggle').on('click', function () {
+        // クリックした際の動作を記述
+        $('.box').toggleClass('red-box');
+      });
+    });
+  </script>
+</body>
+
+</html>

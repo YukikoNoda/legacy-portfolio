@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, p, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: 'Noto Serif JP', serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+body {
+  background-color: #e6e2d7;
+}
+a {
+  color: #fff;
+}
+.container {
+  padding: 0 3%;
+  box-sizing: border-box;/* ここで調整することにした */
+}
+
+/* ---------- Header ---------- */
+header {
+  /* 「オンラインストアを見る」ボタンのためのposition */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 背景を画面下まで設定 */
+  background: url(http://placehold.jp/640x760.png) no-repeat center/cover;
+  margin-bottom: 80px;
+  padding: 20px;
+  box-sizing: border-box; /* 画像上に文字をおくなどでpaddingを入れる場合は注意 */
+  /* 縦書きの指定（各ブラウザに対応するためのベンダープレフィックスを設定） */
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl; /* Chrome、Safari用 */
+  -moz-writing-mode: vertical-rl; /* Firefox用 */
+  -ms-writing-mode: tb-rl; /* IE用 */
+}
+h1 {
+  margin-left: 60px;
+  line-height: 1px;
+}
+h1 a {
+  display: block;
+  width: 40px;
+}
+/* 「オンラインストアを見る」ボタン */
+header .onlinestore {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+}
+header .onlinestore a {
+  display: block;
+  border: solid 1px #ccc;
+  padding: 30px 18px;
+}
+
+/* ---------- Navigation ---------- */
+nav li {
+  margin-left: 25px;
+}
+
+/* ---------- News ---------- */
+/*「display: flex」で横並びに配置
+そのままではタイトルが左にくるから、「row-reverse」で順序を入れ替え*/
+#news {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#news h2 {
+  font-weight: normal;
+  /* 縦書き4点セット */
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#news h2 .en {
+  display: block;
+  font-size: 14px;
+  margin-left: 15px;
+}
+#news h2 .ja {
+  display: block;
+  font-size: 28px;
+  letter-spacing: 5px;
+}
+#news .list {
+  padding: 20px 30px 0 0;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+#news .list dt {
+  border-right: solid 1px #000;
+  font-size: 12px;
+  padding: 15px 12px;
+}
+/* スマホの場合は4つ目以降を非表示に */
+#news .list dt:nth-of-type(n + 4) {
+  display: none;
+}
+#news .list dd {
+  padding: 15px 0 15px 12px;
+}
+/* 3つ目の左側に罫線を引く */
+#news .list dd:nth-of-type(3) {
+  border-left: solid 1px #000;
+}
+/* スマホの場合は4つ目以降を非表示にする */
+#news .list dd:nth-of-type(n + 4) {
+  display: none;
+}
+
+/* ------------------------------
+  Products
+------------------------------ */
+.products {
+  display: flex;
+  margin-bottom: 100px;
+}
+.products h2 {
+  font-weight: normal;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+.products h2 .ja {
+  letter-spacing: 5px;
+}
+/* スマホの場合は英語タイトルを非表示 */
+.products h2 .en {
+  display: none;
+}
+/* 画像の上にテキストを重ねるためのpositionを設定 */
+.products .img {
+  position: relative;
+  width: 90%;
+  padding-top: 70px; /* 画像上の余白 */
+}
+/*「position: absolute;」でテキストを画像の上に配置 */
+.products .text {
+  position: absolute;
+  bottom: -20px;
+  width: 64%;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ---------- Products1 ---------- */
+/* 「row-reverse」タイトルと画像の順序を入れ替え*/
+#products1 {
+  flex-direction: row-reverse;
+}
+#products1 h2 {
+  margin-left: 10px;
+}
+#products1 .text {
+  background: rgba(249, 233, 6, 0.6);
+  left: -20px;
+}
+
+/* ---------- Products2 ---------- */
+#products2 h2 {
+  margin-right: 10px;
+}
+#products2 .text {
+  background: rgba(149, 42, 38, 0.6);
+  right: -20px;
+}
+
+/* ---------- Map ---------- */
+/* iframeのwidthに100%を指定して全幅表示 */
+#map iframe {
+  width: 100%;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px 30px 20px;
+}
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+footer .inner .left,
+footer .inner .right {
+  /* 縦書き4点セット */
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -moz-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+footer .inner .logo {
+  width: 40px;
+  margin-left: 25px;
+}
+footer .inner .info {
+  line-height: 2;
+}
+footer .menu {
+  margin-right: 25px;
+}
+footer .menu li {
+  margin-left: 10px;
+}
+footer .copy {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (min-width:768px) {
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    margin-bottom: 180px;
+    padding: 60px 80px;
+    background: url(http://placehold.jp/1920x1280.png) no-repeat center/cover;
+  }
+  header .onlinestore {
+    left: 40px;
+    bottom: 30px;
+  }
+  header .onlinestore a:hover {
+    opacity: 0.7;
+  }
+
+  /* ---------- News ---------- */
+  #news {
+    margin-bottom: 180px;
+  }
+  #news h2 .ja {
+    display: block;
+    font-size: 36px;
+  }
+  #news .list {
+    padding: 80px 100px 0 0;
+  }
+  #news .list dt {
+    padding: 15px 30px 15px 10px;
+  }
+  #news .list dt:nth-of-type(n + 4) {
+    display: block;
+  }
+  #news .list dd {
+    padding: 15px 0 15px 30px;
+  }
+  #news .list dd:nth-of-type(3) {
+    border-left: none;
+  }
+  #news .list dd:nth-of-type(n + 4) {
+    display: block;
+  }
+  /*最後だけ左側に罫線を引く*/
+  #news .list dd:last-child {
+    border-left: solid 1px #000;
+  }
+
+  /* ------------------------------
+  Products
+  ------------------------------ */
+  .products {
+    margin-bottom: 180px;
+  }
+  .products h2 .ja {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+  .products h2 .en {
+    display: inline;
+    font-size: 14px;
+  }
+  .products .img {
+    width: 65%;
+    padding-top: 100px;
+  }
+  .products .text {
+    width: 56%;
+    padding: 50px 0;
+    font-size: 16px;
+  }
+
+  /* ---------- Products1 ---------- */
+  #products1 h2 {
+    margin-left: 20px;
+  }
+
+  /* ---------- Products2 ---------- */
+  #products2 h2 {
+    margin-right: 20px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 80px 80px 30px 30px;
+  }
+  footer .inner .logo {
+    margin-left: 60px;
+  }
+  footer .menu {
+    font-size: 16px;
+    margin-right: 60px;
+  }
+  footer .menu li {
+    margin-left: 25px;
+  }
+}

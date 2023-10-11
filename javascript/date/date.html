@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今日の日付を表示</title>
+</head>
+
+<body>
+  <h2 id="ans">ここに結果を表示</h2>
+  <p>※営業時間は10時〜21時となっております。</p>
+
+  <script>
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const date = today.getDate();
+    const hour = today.getHours();
+    const minute = today.getMinutes();
+    const second = today.getSeconds();
+    const day = today.getDay();
+    const week = ['日', '月', '火', '水', '木', '金', '土']
+
+    const element = document.getElementById('ans');
+
+    const str = `今日は${year}年${month}月${date}日${hour}時${minute}分${second}秒、${week[day]}曜日です。`;
+
+    if (hour >= 10 && hour < 21) {
+      element.textContent = `営業中：${str}`;
+      element.style.color = "#090";
+    } else {
+      element.textContent = `時間外：${str}`;
+      element.style.color = "#d00";
+    }
+  </script>
+</body>
+
+</html>

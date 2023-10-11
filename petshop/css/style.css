@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+body {
+  background: #ffc;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
+h1 {
+  margin-bottom: 20px;
+  padding: 20px 0;
+  background: #900;
+  color: #fff;
+}
+h1 span {
+  font-size: 35px;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+header p {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border: 1px solid #900;
+  background: #eda;
+  color: #900;
+}
+
+/* ---------- Hamburger ---------- */
+.btn {
+  display:none;
+}
+
+/* ---------- PC Navigation ---------- */
+.pcnav ul {
+  display: flex;
+  margin-bottom: 20px;
+}
+.pcnav li {
+  width: calc(100% / 5);
+}
+.pcnav li a {
+  display: block;
+  padding: 15px 0;
+  border-left: 1px solid #fff;
+  background-color: #900;
+  color: #fff;
+}
+.pcnav li:first-child a {
+  border-left: none;
+}
+.pcnav a:hover {
+  background: #f70;
+}
+
+/* ---------- Key Visual ---------- */
+.keyVis {
+  margin-bottom: 20px;
+}
+
+/* ---------- Main Content ---------- */
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  text-align: left;
+}
+main section {
+  width: 32%;
+}
+
+/* 中見出し(h2) */
+h2 {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #900;
+  color: #fff;
+}
+
+main img {
+margin-bottom: 10px;
+}
+
+.intro {
+  height: 12em;
+  line-height:1.5;
+}
+
+/*詳細を見る*/
+.more {
+  padding: 10px;
+  border: 1px solid #900;
+  background: #fc0;
+  color: #900;
+}
+.more:hover {
+  background: #f00;
+  color: #fff;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding:20px 0;
+  border-top: 1px solid #900;
+}
+
+
+/* ********** Media Query ********** */
+@media screen and (max-width:767px) {
+
+  /* ----- Header ----- */
+  h1 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  h1 span {
+    font-size: 18px;
+  }
+  header p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  /* ----- Hamburger ----- */
+  .btn{
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  width:50px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.btn i{
+  color: #fff;
+  font-size: 35px;  
+  line-height: 50px;
+}
+
+  /* ----- SP Navigation ----- */
+  .spnav {
+    display:none;
+    position: absolute;
+    top: 57px;
+    width: calc(100% - 20px);
+  }
+
+  .spnav ul {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .spnav li {
+    width: auto;
+  }
+  .spnav li a {
+    border: none;
+    background: rgba(150, 0, 0, 0.7);
+  }
+
+  /* ----- Key Visual ----- */
+  .keyVis {
+  margin-bottom: 10px;
+}
+
+  /* ----- Main Content ----- */
+  main {
+    display: block;
+  }
+  main section {
+    width: auto;
+    margin-bottom: 30px;
+  }
+  main img {
+    display: block;
+    width: 80%;
+    margin: 0 auto 10px;
+  }
+  .intro {
+    height: auto;
+    margin-bottom: 25px;
+  }
+}

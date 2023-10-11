@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サイコロの目の数字を表示</title>
+</head>
+
+<body>
+  <h1>サイコロの目の数字(１~６の整数)を表示</h1>
+  <p></p>
+  <p>ボタンを押すとサイコロの目がランダムに変わります。</p>
+  <button onclick="result()">サイコロを振る</button>
+  <h2 id="ans"><img src="img/1.jpg" alt=""></h2>
+
+  <script>
+    function result() {
+    const num = ['one', 'two', 'three', 'four', 'five', 'six'];
+    const rnd = Math.floor(Math.random()*num.length);
+    // console.log(rnd);
+
+    const element = document.getElementById('ans');
+    // console.log(ans);
+    
+    element.innerHTML = `<img src="img/${num[rnd]}.jpg" alt="${rnd + 1}">`;
+    console.log(element.innerHTML)
+    }
+  </script>
+</body>
+
+</html>

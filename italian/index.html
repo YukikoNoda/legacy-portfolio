@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CAFE de FELICA</title>
+  <meta name="description" content="CAFE de FELICAでは美味しいイタリア料理を提供いたします。">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top">
+  <!-- Header -->
+  <header class="header">
+    <h1>CAFE de FELICA</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="g-nav">
+    <ul>
+      <li><a href="#top">Top</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#reserve">Reserve</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+    <section id="news" class="contents news">
+      <h2>News</h2>
+      <div class="news-wrap">
+        <dl>
+          <dt>12月24日</dt>
+          <dd>クリスマスパーティのため貸し切りです</dd>
+          <dt>12月23日</dt>
+          <dd>冬のメニュー始めました</dd>
+          <dt>12月22日</dt>
+          <dd>お正月福袋の販売</dd>
+        </dl>
+
+        <div class="g-calender">
+          <iframe class="calender" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23E67C73&ctz=Asia%2FTokyo&showTz=0&showCalendars=0&showTabs=0&showPrint=0&showDate=1&hl=ja&src=bmNvOGJ1NDRjcGQ4ZW1ndWVlODQwZ3FocTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23EF6C00&color=%230B8043" scrolling="no"></iframe>
+        </div><!-- /.g-calender -->
+      </div><!-- /.news-wrap -->
+    </section><!-- /#news -->
+
+    <section id="menu" class="contents menu">
+      <h2>Menu</h2>
+      <div class="menu-image">
+        <p><a href="img/image01.jpg" data-lightbox="image"><img src="img/image01.jpg" alt="menu画像"></a></p>
+        <p><a href="img/image02.jpg" data-lightbox="image"><img src="img/image02.jpg" alt="menu画像"></a></p>
+        <p><a href="img/image03.jpg" data-lightbox="image"><img src="img/image03.jpg" alt="menu画像"></a></p>
+      </div><!-- /.menu-image -->
+    </section><!-- /#menu -->
+
+    <section id="map" class="contents map">
+      <h2>Map</h2>
+      <div class="g-map">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.011647079433!2d139.71170681524802!3d35.72593208018388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6b8b0de7dd%3A0xd184e022fc8bf0e6!2z5qCq5byP5Lya56S-44OV44Kh44Km44Oz44OH44O844K344On44Oz44OV44Kn44Oq44KrVEE!5e0!3m2!1sja!2sjp!4v1642589132742!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div><!-- /.g-map -->
+    </section><!-- /#map -->
+
+
+    <section id="reserve" class="contents form">
+      <h2>Reserve</h2>
+      <div class="g-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScucPPIIMoTiYaMYEj3wP38E-T9cy2cZZwuFX0rxOjD6DLxHw/viewform?embedded=true" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+      </div><!-- /.g-form -->
+    </section><!-- /#reserve -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><small>&copy; 2011- 2022 Cafe de Felica</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/lightbox.js"></script>
+
+  <script>
+    $(function () {
+
+      //scroll
+      $(window).on('scroll', function () {
+
+        //スクロールバーの位置
+        let scTop = $(this).scrollTop();
+        //console.log(scTop);
+
+        //header要素の高さ
+        let header_h = $('.header').outerHeight();
+        //console.log(header_h);
+
+        //header要素の高さ分スクロールしたら
+        //用意したclass名を付ける
+        if (header_h <= scTop) {
+          $('.g-nav').addClass('scroll');
+        } else {
+          $('.g-nav').removeClass('scroll');
+        }
+
+      });
+
+
+      //ナビゲーション処理
+      $('.g-nav a').on('click', function () {
+        //aタグのid名を取得
+        let target = $(this).attr('href');
+
+        //targetまでの距離を取得
+        let value = $(target).offset();
+        console.log(value);
+        //animateで移動
+        $('html,body').animate({
+          scrollTop: value.top - 100
+        });
+
+        //aタグのlink機能を抑制
+        return false;
+
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

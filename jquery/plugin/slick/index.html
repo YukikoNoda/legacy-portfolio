@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slick</title>
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul class="regular slider">
+    <li><a href="img/imge01.jpg" data-lightbox="cat"><img src="img/imge01.jpg" alt=""></a></li>
+    <li><a href="img/imge02.jpg" data-lightbox="cat"><img src="img/imge02.jpg" alt=""></a></li>
+    <li><a href="img/imge03.jpg" data-lightbox="cat"><img src="img/imge03.jpg" alt=""></a></li>
+    <li><a href="img/imge04.jpg" data-lightbox="cat"><img src="img/imge04.jpg" alt=""></a></li>
+    <li><a href="img/imge05.jpg" data-lightbox="cat"><img src="img/imge05.jpg" alt=""></a></li>
+    <li><a href="img/imge06.jpg" data-lightbox="cat"><img src="img/imge06.jpg" alt=""></a></li>
+    <li><a href="img/imge07.jpg" data-lightbox="cat"><img src="img/imge07.jpg" alt=""></a></li>
+    <li><a href="img/imge08.jpg" data-lightbox="cat"><img src="img/imge08.jpg" alt=""></a></li>
+    <li><a href="img/imge09.jpg" data-lightbox="cat"><img src="img/imge09.jpg" alt=""></a></li>
+  </ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+  $(function () {
+    $('.regular').slick({
+      dots: false, // 画像下のページドット
+      infinite: true, // 無限ループ
+      slidesToShow: 3,  // 3枚表示
+      slidesToScroll: 1  // 1枚ずつ移動
+    });
+  });
+</script>
+
+<script src="js/lightbox.js"></script>
+</body>
+</html>

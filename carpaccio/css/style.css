@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+ul {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+header {
+  height: 200px;
+  background: url(../img/header.jpg) no-repeat;
+  color: #fff;
+  text-align: right;
+}
+h1 {
+  padding: 20px 20px 0 0;
+  font-size: 60px;
+  font-family: 'Berkshire Swash', cursive;
+}
+header p {
+  padding-right: 20px;
+}
+
+/* ---------- Navigation ---------- */
+.pcnav ul {
+  display: flex;
+  justify-content: space-between;
+  /*左内側余白とる*/
+  padding: 0;
+}
+.pcnav li {
+  width: 18%;
+  text-align: center;
+}
+.pcnav a {
+  display: block;
+  padding: 15px 0;
+  border: 2px solid #090;
+  background-color: #dfd;
+  color: #090;
+}
+.pcnav a:hover {
+  background-color: #090;
+  color: #dfd;
+}
+
+/* ---------- Main Content ---------- */
+/* 中見出し(h2) */
+h2 {
+  clear: both;
+  padding-left: 38px;
+  background: url(../img/head_icon.jpg) no-repeat left center;
+  color: #090;
+}
+/* 小見出し(h3) */
+h3 {
+  clear: both;
+  padding: 5px;
+  background-color: #090;
+  color: #fff;
+}
+
+/*画像float処理*/
+main img {
+  float: right;
+  margin: 0 0 30px 20px;
+}
+
+/*材料表*/
+table {
+  border-collapse: collapse;
+}
+th {
+  background: #dfd;
+}
+th, td {
+  padding: 5px;
+  border: 1px solid #090;
+}
+
+/*調理手順、用語解説*/
+ol, dl {
+  border: 1px solid #090;
+  background: #dfd;
+}
+ol {
+  padding: 20px 20px 20px 40px;
+}
+dl {
+  padding: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid #090;
+}
+
+/* ---------- Media Query ---------- */
+@media screen and (max-width:767px) {
+  
+  /* ----- Navigation ----- */
+  .spnav ul {
+    display: block;
+  }
+  .spnav li {
+    width: auto;
+  }
+  .spnav a {
+    border: none;
+  }
+}

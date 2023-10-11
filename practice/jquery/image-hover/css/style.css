@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* ---------- リセットcss ---------- */
+html, body, ul, li {
+  margin:0;
+  padding:0;
+  line-height:1;
+  font-family:"Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style:none;
+}
+img {
+  max-width:100%;
+  height:auto;
+  border:none;
+  vertical-align:bottom;
+}
+
+/* ---------- 共通css ---------- */
+.container {
+  padding: 0 10px;
+  margin: 50px auto;
+}
+.mainvisual {
+  padding: 5px;
+}
+ul {
+  display: flex;
+}
+ul li {
+  width: calc(100% / 5);
+  padding: 5px;
+}
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (min-width:768px) {
+
+  .container {
+    max-width: 960px;
+    padding: 0 20px;
+  }
+  .mainvisual {
+    padding: 10px;
+  }
+  ul li {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felica Cafe</title>
+  <meta name="description" content="Felica Cafeでは美味しい料理を提供しております。">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+    <div class="header-inner">
+      <h1>Felica Cafe</h1>
+      <div class="sp-btn">MENU</div>
+    </div><!-- /.header-inner -->
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#">concept</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">access</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <ul class="main-visual">
+        <li class="image01"></li>
+        <li class="image02"></li>
+        <li class="image03"></li>
+        <li class="image04"></li>
+      </ul>
+    </section>
+
+    <section class="menu-content container">
+      <h2>Menu</h2>
+      <ul class="modal">
+        <li><a href="img/image11.jpg" data-lightbox="image"><img src="img/image11.jpg" alt="menu-image01"></a></li>
+        <li><a href="img/image12.jpg" data-lightbox="image"><img src="img/image12.jpg" alt="menu-image02"></a></li>
+        <li><a href="img/image13.jpg" data-lightbox="image"><img src="img/image13.jpg" alt="menu-image03"></a></li>
+        <li><a href="img/image14.jpg" data-lightbox="image"><img src="img/image14.jpg" alt="menu-image04"></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p><small>氏名：野田 夕紀子</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+  $(function(){
+  $('.sp-btn').on('click',function(){
+  $(this).toggleClass('open');
+  $('nav ul').slideToggle();
+  });
+  });
+  </script>
+
+  <script src="js/jquery.bxslider.js"></script>
+  <script>
+    $('.main-visual').bxSlider({
+      auto: true,
+      pager: false,
+      controls: false
+    });
+  </script>
+
+  <script src="js/lightbox.js"></script>
+</body>
+
+</html>

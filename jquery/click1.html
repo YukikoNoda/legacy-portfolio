@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQueryでのclickイベント</title>
+
+  <style>
+    html, body, h1, ul, li {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    ul {
+      list-style: none;
+    }
+    /* container 
+----------------------------*/
+    .container {
+      width: 500px;
+      margin: 50px auto;
+    }
+    h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      width: 100px;
+      border: 1px solid #000;
+      line-height: 50px;
+      text-align: center;
+    }
+    li:hover {
+      color: #fff;
+    }
+    li:hover.red {
+      background: #f00;
+    }
+    li:hover.blue {
+      background: #00f;
+    }
+    li:hover.green {
+      background: #0f0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>jQueryでのクリックイベント</h1>
+
+    <ul>
+      <li class="red">赤</li>
+      <li class="blue">青</li>
+      <li class="green">緑</li>
+    </ul>
+  </div><!-- /.container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+
+      // .redをclickした際の処理
+      $('.red').on('click', function () {
+        // h1の文字色が「赤」に変わる
+        $('h1').css('color', '#f00');
+        // h1のテキストを変更
+        $('h1').text('文字色を赤に変更しました');
+      });
+
+      // .blueをclickした際の処理
+      $('.blue').on('click', function () {
+        $('h1').css('color', '#00f');
+        $('h1').text('文字色を青に変更しました');
+      });
+
+      // .greenをclickした際の処理
+      $('.green').on('click', function () {
+        $('h1').css('color', '#0f0');
+        $('h1').text('文字色を緑に変更しました');
+      });
+    });
+  </script>
+</body>
+
+</html>

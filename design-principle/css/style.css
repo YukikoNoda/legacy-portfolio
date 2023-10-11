@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* ---------- 共通css ---------- */
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  color: #333;
+  padding: 0 3%;
+}
+p {
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+h1 {
+  position: relative;
+   text-align: center;
+   width:70%;
+   margin: 50px auto 80px;
+   letter-spacing: 7px;
+ }
+ h1:before,
+ h1:after {
+   content: '';
+   position: absolute;
+   z-index: 0;
+   bottom: -10px;
+   display: block;
+   border: 1em solid #d90606;
+ }
+ h1:before {
+   left: -30px;
+   border-left-width: 15px;
+   border-left-color: transparent;
+ }
+ h1:after {
+   right: -30px;
+   border-right-width: 15px;
+   border-right-color: transparent;
+ }
+ h1 span {
+   position: relative;
+   z-index: 1;
+   display: block;
+   padding: 1rem 2rem;
+   color: #fff;
+   background: #fa4141;
+ }
+ h1 span:before,
+ h1 span:after {
+   position: absolute;
+   bottom: -10px;
+   display: block;
+   width: 10px;
+   height: 10px;
+   content: '';
+   border-style: solid;
+   border-color: #b70505 transparent transparent transparent;
+ }
+ h1 span:before {
+   left: 0;
+   border-width: 10px 0 0 10px;
+ }
+ h1 span:after {
+   right: 0;
+   border-width: 10px 10px 0 0;
+ }
+
+/* ---------- Navigation ---------- */
+.g-nav {
+  margin-bottom: 50px;
+  padding-left: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.g-nav a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 3px solid transparent;
+  transition: 300ms;
+}
+
+.g-nav a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+.g-nav li:first-child a::after{
+  background-color: #ff479a;
+}
+.g-nav li:nth-child(2) a::after{
+  background-color: #e08300;;
+}
+.g-nav li:nth-child(3) a::after{
+  background-color: #507c02;
+}
+.g-nav li:last-child a::after{
+  background-color: #008fcc;
+}
+
+.g-nav a:hover::after {
+  transform: scale(1, 1);
+}
+
+/* ------------------------------
+  Main Content
+------------------------------ */
+
+.main h2 {
+  position: relative;
+  padding: 1.5rem 1rem;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+}
+
+.main h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 370px;
+  height: 10px;
+  background-image: -webkit-repeating-linear-gradient(135deg, #333, #333 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #333, #333 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.main h2 span {
+  color: #fa4141;
+  font-size: 40px;
+}
+
+.main .content-text {
+  margin-bottom: 60px;
+}
+.main .content-text span {
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
+
+.main .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+.main .content li {
+  width: 48%;
+  padding: 20px 3%;
+  margin-bottom: 30px;
+}
+.main h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+.main .content p:first-of-type {
+  margin-bottom: 20px;
+}
+.main .content span.first {
+  font-size: 25px;
+  padding-right: 5px;
+}
+.main .content span.line {
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
+/* 各コンテンツの色調整 */
+#alignment {
+  border-radius: 50px 50px 0 50px;
+ background-color: #ffebf4;
+ box-shadow: 1px 1px 5px #ff479a;
+}
+#alignment h3 {
+  color: #ff479a;
+ }
+#proximity {
+  border-radius: 50px 50px 50px 0;
+ background-color: #fce3ba;
+ box-shadow: 1px 1px 5px #e08300;
+}
+#proximity h3 {
+  color: #e08300;
+ }
+#contrast {
+  border-radius: 50px 0 50px 50px;
+ background-color: #e7ffbf;
+ box-shadow: 1px 1px 5px #507c02;
+}
+#contrast  h3{
+  color: #507c02;
+ }
+#repetition {
+  border-radius: 0 50px 50px 50px;
+  background-color: #d7f3ff;
+  box-shadow: 1px 1px 5px #008fcc;
+}
+#repetition h3 {
+  color: #008fcc;
+}
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (max-width:767px) {
+
+    /* Navitgation */
+  .g-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .g-nav li {
+    margin-bottom: 20px;
+  }
+  .g-nav li:first-child a::after,
+  .g-nav li:nth-child(2) a::after,
+  .g-nav li:nth-child(3) a::after,
+  .g-nav li:last-child a::after {
+    background: none;
+  }
+
+  /* Main Content */
+  .main .content {
+    display: block;
+  }
+  .main .content li {
+    width: auto;
+  }
+  #alignment, #proximity, #contrast , #repetition{
+    border-radius: 10px;
+  }
+}

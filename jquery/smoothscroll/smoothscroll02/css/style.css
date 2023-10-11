@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* リセットcss */
+html, body, h1, p, ul, li {
+margin: 0;
+padding: 0;
+line-height: 1;
+}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+/* ---------- Header ---------- */
+.header {
+ padding: 30px 0;
+ text-align: center;
+ background-color: #ffb2b2;
+ color: #fff;
+}
+
+
+/* ---------- Main ---------- */
+.menu-box{
+ height: 100vh;
+ padding: 60px;
+ color: #fff;
+ font-size: 32px;
+ font-weight: bold;
+ text-align: center;
+ box-sizing: border-box;
+}
+
+.menu01 {background-color: #e24343;}
+.menu02 {background-color: #e2df43;}
+.menu03 {background-color: #43e24b;}
+.menu04 {background-color: #43e2da;}
+.menu05 {background-color: #1f56bd;}
+
+/* ---------- Footer ---------- */
+.footer {
+padding: 20px 0;
+text-align: center;
+color: #fff;
+background-color: #cacaca;
+}
+
+/* ---------- page-top ---------- */
+.page-top {
+position: fixed;
+right: 20px;
+bottom: 40px;
+
+width: 50px;
+height: 50px;
+background-color: #d66c6c;
+border: 2px solid #fff;
+line-height: 46px;
+text-align: center;
+font-weight: bold;
+box-sizing: border-box;
+}
+
+.page-top a {
+display: block;
+color: #fff;
+}
+.page-top a:hover {
+background-color: #f5a2a2;
+}
+
+/* ---------- Navigation ---------- */
+.g-nav {
+display: flex;
+max-width: 960px;
+padding: 10px 0;
+margin: auto;
+}
+.g-nav li {
+width: calc(100% / 5);
+}
+.g-nav li a {
+display: block;
+line-height: 50px;
+text-align: center;
+color: #fff;
+border-right: 1px solid #fff;
+}
+.g-nav li:first-child a {
+border-left: 1px solid #fff;
+}
+.g-nav li a:hover {
+background-color: #ffd3d3;
+}

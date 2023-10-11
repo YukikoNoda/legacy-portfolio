@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像を使用した配列演習</title>
+
+  <style>
+  /* ----- リセットCSS ---------- */
+  html,body,h1,p,ul,li{
+  margin:0;
+  padding:0;
+  line-height: 1;
+  }
+  ul{
+  list-style: none;
+  }
+  img{
+  max-width:100%;
+  vertical-align: bottom;
+  }
+
+/* ----- container --------- */
+.container{
+width:300px;
+margin:30px auto;
+padding: 20px;
+border:5px solid #ccc;
+border-radius: 3px;
+}
+.container h1 {
+margin: 30px 0;
+font-size:24px;
+text-align: center;
+}
+.image{
+margin-bottom:30px;
+text-align:center;
+}
+p{
+    margin-bottom:20px;
+    padding-left:10px;
+}
+.container ul{
+display: flex;
+}
+.container li{
+  margin: 0 10px;
+border: 1px solid #ccc;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1>画像を使用した配列演習</h1>
+  <p class="image"><img id="fruits" src="img/apple.jpg" alt="画像"></p>
+  <p>下記の果物をクリックして下さい</p>
+  <ul>
+  <li onclick="image_change(0)"><img src="img/apple.jpg" alt="画像"></li>
+  <li onclick="image_change(1)"><img src="img/banana.jpg" alt="画像"></li>
+  <li onclick="image_change(2)"><img src="img/budou.jpg" alt="画像"></li>
+  <li onclick="image_change(3)"><img src="img/suika.jpg" alt="画像"></li>
+  </ul>
+  </div><!-- container -->
+
+  <script>
+  function image_change(index){
+    // 画像ファイル名の配列
+    const img_file = ['apple.jpg', 'banana.jpg','budou.jpg','suika.jpg'];
+
+    // DOM操作
+    const element = document.getElementById('fruits');
+    element.src = 'img/' + img_file[index];
+  }
+  
+  
+  </script>
+</body>
+
+</html>

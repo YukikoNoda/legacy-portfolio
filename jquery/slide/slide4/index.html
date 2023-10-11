@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>スライドメニュー</title>
+
+  <style>
+    /* リセットcss */
+    html, body, h1, p, ul, li {
+      margin: 0;
+      padding: 0;
+      line-height: 1.0;
+      font-family: "Hiragino Kaku Gotic ProN", Meiryo, sans-serif;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: none;
+      vertical-align: bottom;
+    }
+
+    /* 共通css */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: #38579A;
+      color: #fff;
+    }
+
+    /* ボタン */
+    .btn {
+      display: none;
+      width: 60px;
+      line-height: 60px;
+      border: 2px solid #f00;
+      background: rgba(255,255,255,0.9);
+      color: #f00;
+      font-weight: bold;
+      text-align: center;
+    }
+    .btn.open {
+      background: rgb(255, 185, 35);
+      color: #fff;
+    }
+
+    /* ----- Navigation ----- */
+    /* 共通nav */
+    nav {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    nav ul {
+      background: rgba(255, 255, 255, 0.9);
+    }
+    nav li {
+      line-height: 50px;
+      text-align: center;
+    }
+    nav ul a {
+      display: block;
+      color: #f00;
+    }
+    nav ul a:hover {
+      background: #f00;
+      color: #fff;
+    }
+
+    /* PC nav */
+    .pc ul{
+      display: flex;
+      justify-content: space-between;
+    }
+    .pc li {
+      width: calc(100% / 5);
+    }
+    .pc ul a {
+      border-left: 1px solid #f00;
+    }
+    .pc li:first-child a {
+      border-left: none;
+    }
+
+    /* SP nav */
+    .sp ul {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .sp ul a {
+      border-bottom: 1px solid #f00;
+    }
+    .sp li:first-child a {
+      border-top: 1px solid #f00;
+    }
+
+    /* Key Visual */
+    .key-visual {
+      min-height: 300px;
+      background: url(img/mall_bg.jpg) top center/cover;
+    }
+
+
+    /* Media Query */
+    @media screen and (max-width:767px) {
+      .pc {
+        display: none;
+      }
+      .sp {
+        display: block;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>スライドメニュー</h1>
+      <div class="btn sp">MENU</div>
+    </header>
+
+    <nav class="pc">
+      <ul>
+        <li><a href="#">nav01</a></li>
+        <li><a href="#">nav02</a></li>
+        <li><a href="#">nav03</a></li>
+        <li><a href="#">nav04</a></li>
+        <li><a href="#">nav05</a></li>
+      </ul>
+    </nav>
+
+    <nav class="sp">
+      <ul>
+        <li><a href="#">nav01</a></li>
+        <li><a href="#">nav02</a></li>
+        <li><a href="#">nav03</a></li>
+        <li><a href="#">nav04</a></li>
+        <li><a href="#">nav05</a></li>
+      </ul>
+    </nav>
+
+    <p class="key-visual"></p>
+
+  </div><!--/.contaienr-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('.btn').on('click', function () {
+        $(this).toggleClass('open');
+        $('.sp ul').slideToggle();
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>APPLE Site|りんごのサイト</title>
+  <meta name="description" content="リンゴのサイトでは、りんごの知識（雑学）をメインにおおくりしていきます。紅将軍、焼き林檎、リンゴ隊隊長のキャラクター紹介もあります。">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>APPLE Site</h1>
+      <p>りんごの効能やレシピを紹介します。</p>
+    </div>
+  </header>
+
+  <!-- PC Navigation -->
+  <nav class="pcnav">
+    <ul class="container">
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">りんごとは</a></li>
+      <li><a href="#">効能</a></li>
+      <li><a href="#">レシピ集</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hamburger -->
+  <div class="btn">
+    <i class="fas fa-arrow-circle-down"></i>
+    <i class="fas fa-arrow-circle-up"></i>
+  </div><!-- /.btn -->
+
+  <!-- SP Navigation -->
+  <nav class="spnav">
+    <ul>
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">りんごとは</a></li>
+      <li><a href="#">効能</a></li>
+      <li><a href="#">レシピ集</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="apple">
+      <h2>りんごについて</h2>
+      <div class="intro">
+        <p>“りんご”といえばシャキッとした食感と甘酸っぱい風味が特徴ですよね。さま ざまな加工品に用いられ、私たちにとって馴染み深い果物ともいえるでしょう。</p>
+        <p>しかし、小さい頃から当たり前のようにある果物なだけに、その知識はあまり知られていません。そこで･･･当サイトでは、<a href="#">りんごの知識（雑学）</a>をメインにおおくりしていきます。</p>
+      </div><!-- /.intro -->
+
+      <section class="item">
+        <h3>紅将軍</h3>
+        <img class="ph" src="img/apple1.png" alt="りんご（紅将軍）の画像">
+        <p>
+          サクッとした歯ごたえ、豊富な果汁と甘い香りでまろやかな味の津軽。甘味と酸味のバランスがとれた昂林。ツル割れが生じやすくなかなか市場に出回らないことから、一部では幻のリンゴとも言われている紅将軍。</p>
+        <p><a href="#" class="more"><i class="fas fa-arrow-circle-right"></i>詳細を見る</a></p>
+      </section>
+
+      <section class="item">
+        <h3>焼きりんご</h3>
+        <img class="ph" src="img/apple2.png" alt="焼きりんごの画像">
+        <p>“焼きりんご”はりんごを丸ごと食べられる、冬の定番スイーツです。 りんごの芯をくり抜いたら砂糖やバターを詰め込み、あとはじっくり焼き上げるだけ･･･と作り方も超簡単。</p>
+        <p><a href="#" class="more"><i class="fas fa-arrow-circle-right"></i>詳細を見る</a></p>
+      </section>
+    </section>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- りんご隊隊長 -->
+      <section>
+        <h2>りんご隊隊長</h2>
+        <img src="img/apple3.png" alt="りんご隊隊長のイラスト画像">
+        <p>りんご隊長は、りんごについて知識をもち、新しいりんご料理につねにチャレンジしています。</p>
+      </section>
+
+      <!-- 更新情報 -->
+      <section>
+        <h2>更新情報</h2>
+        <dl>
+          <dt>2021.05.30</dt>
+          <dd>Webサイトリニューアルオープンしました！</dd>
+          <dt>2021.04.20</dt>
+          <dd><a href="#">りんご隊隊長のキャラクター募集開始しました。</a></dd>
+          <dt>2021.04.12</dt>
+          <dd><a href="#">りんご隊隊長のキャラクターが決定しました。</a></dd>
+        </dl>
+      </section>
+    </div><!-- /.sidebar -->
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="container"><small>Copyright &copy; 2019 All rights reserved.</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $('.btn').on('click', function(){
+      $(this).toggleClass('up');
+      $('.spnav').slideToggle();
+    });
+  </script>
+
+</body>
+
+</html>

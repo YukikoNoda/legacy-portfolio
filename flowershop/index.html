@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>フラワーショップ：華屋</title>
+  <meta name="description" content="フラワーショップ：華屋はあなたに世界中のお花をお届けします。">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>フラワーショップ：華屋</h1>
+    <p>あなたに世界中のお花をお届けします。</p>
+  </header>
+
+  <!-- PC Navigation -->
+  <nav class="pcnav">
+    <ul class="container">
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">華屋について</a></li>
+      <li><a href="#">店舗案内</a></li>
+      <li><a href="#">ギフト</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </nav>
+
+  <!-- SP Navigation -->
+  <div class="btn">
+    <i class="fas fa-arrow-alt-circle-down"></i>
+    <i class="fas fa-arrow-alt-circle-up"></i></i>
+    </div>
+
+  <nav class="spnav">
+    <ul class="container">
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">華屋について</a></li>
+      <li><a href="#">店舗案内</a></li>
+      <li><a href="#">ギフト</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Key Visual -->
+  <p class="keyVis"><img src="img/flower.png" alt="花のイメージ写真"></p>
+
+  <!-- Main Content -->
+  <main>
+    <section>
+      <h2>ブーケセレクション</h2>
+
+      <div class="container">
+        <section>
+          <img src="img/flower01.jpg" alt="flower01画像">
+          <h3>ブーケ01</h3>
+          <p class="intro">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <p><a href="#" class="more">詳細を見る</a></p>
+        </section>
+
+        <section>
+          <img src="img/flower02.jpg" alt="flower02画像">
+
+          <h3>ブーケ02</h3>
+          <p class="intro">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <p><a href="#" class="more">詳細を見る</a></p>
+        </section>
+
+        <section>
+          <img src="img/flower03.jpg" alt="flower3画像">
+          <h3>ブーケ03</h3>
+          <p class="intro">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          <p><a href="#" class="more">詳細を見る</a></p>
+        </section>
+      </div><!-- /.container -->
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p><small>Copyright &copy; フラワーショップ：華屋 All rights reserved.</small></p>
+  </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$('.btn').on('click',function(){
+  $('.spnav').slideToggle();
+  $(this).toggleClass('up');
+});
+
+</script>
+</body>
+
+</html>

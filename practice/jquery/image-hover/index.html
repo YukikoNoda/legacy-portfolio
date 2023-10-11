@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>画像をホバーでメイン画像の切り替え</title>
+  <meta name="description" content="画像をホバーでメイン画像の切り替え練習サイトです">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="mainvisual">
+      <img src="http://placehold.jp/0/E9B8B8/F28C8E/1000x600.png?text=image1" alt="">
+    </div>
+
+    <ul>
+      <li><img src="http://placehold.jp/0/E9B8B8/F28C8E/1000x600.png?text=image1" alt=""></li>
+      <li><img src="http://placehold.jp/0/EFD5AE/F6C368/1000x600.png?text=image2" alt=""></li>
+      <li><img src="http://placehold.jp/0/A6D0AB/6FC880/1000x600.png?text=image3" alt=""></li>
+      <li><img src="http://placehold.jp/0/A6C6D5/56A1BF/1000x600.png?text=image4" alt=""></li>
+      <li><img src="http://placehold.jp/0/C0B1C7/A182B4/1000x600.png?text=image5" alt=""></li>
+    </ul>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('ul img').on('mouseover', function () {
+
+        // ホバーされた画像のパスを取得  ※$(セレクタ).attr("属性")  ←属性値を取得
+        const img_src = $(this).attr("src");
+
+        // メイン画像と同じサムネイルがホバーされた際は画像切り替えを実行しない
+        if ($('.mainvisual img').attr("src") != img_src) {
+
+          // メイン画像を0.5秒かけてフェードアウト
+          // メイン画像のsrcをホバーされた属性値に変更 ※attrは値の取得,変更、変更ができる
+          // メイン画像を0.5秒かけてフェードインする
+          // ※「フェードアウトが完了した後に実行」のように、 処理が終わったあとに実行させたい場合、コールバック関数を使用
+          $('.mainvisual img').fadeOut(500, function () {
+            $(".mainvisual img").attr({src: img_src});  //連想配列 {属性1: 値1, 属性2: 値2}
+            $(".mainvisual img").fadeIn(500);
+          })
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

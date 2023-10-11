@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, h3, p, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通レイアウト ---------- */
+body {
+  background: #c8e5fc;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background: #fff;
+}
+
+/* ----- Flexbox ----- */
+/* Navigation */
+nav ul {
+  display: flex;
+}
+nav li {
+  width: calc(100% / 7);
+}
+/* 2カラム */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  width: calc(100% * (600 / 960));
+}
+.sidebar {
+  width: calc(100% * (300 / 960));
+}
+
+/* 隠し文字 */
+h1, h2, h3, .keyVis {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: #036eab;
+}
+/* 見出し(h1) */
+h1 {
+  height: 38px;
+  background: url(../img/cam_logo.png) no-repeat;
+}
+
+/* ---------- PC Navigation ---------- */
+.pcnav {
+  background: #edfdff;
+}
+.pcnav li {
+  line-height: 3;
+  border-left: 1px solid #c8e5fc;
+  font-size: 17px;
+  text-align: center;
+}
+.pcnav li:first-child {
+  border-left: none;
+}
+.pcnav a {
+  display: block;
+  color: #000;
+}
+.pcnav a:hover {
+  background: #edfdff;
+}
+
+/* ---------- Key Visual ---------- */
+.keyVis {
+  height: 250px;
+  margin-bottom: 20px;
+  background: url(../img/business.jpg) no-repeat;
+}
+
+/* ********** Contents ********** */
+/* 見出し(h2,h3) */
+h2 {
+  height: 42px;
+  margin-bottom: 20px;
+}
+h3 {
+  height: 38px;
+  margin-bottom: 20px;
+}
+/* 仕切り */
+.sidebar {
+  padding-left: 30px;
+  border-left: 1px solid #c8e5fc;
+}
+/* 行高 */
+.wrapper p, .wrapper dt, .wrapper dd {
+  line-height: 1.6;
+}
+
+/* ---------- Main Content ---------- */
+main h2 {
+  background: url(../img/midashi_1.png) no-repeat;
+}
+.child-1 {
+  background: url(../img/midashi_1_child.png) no-repeat;
+}
+.child-2 {
+  background: url(../img/midashi_2_child.png) no-repeat;
+}
+
+/* 行間 */
+.content {
+  margin-bottom: 50px;
+}
+.content p {
+  margin-bottom: 10px;
+}
+
+/* リンク */
+.content .link {
+  padding-left: 20px;
+  background: url(../img/arrow.png) no-repeat 0 center;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar h2 {
+  background: url(../img/midashi_2.png) no-repeat;
+}
+.sidebar dd {
+  margin-bottom: 15px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 30px 0 50px;
+  background: #036eab;
+  color: #fff;
+  text-align: center;
+}
+footer p {
+  margin-bottom: 15px;
+}
+footer a {
+  margin-right: 10px;
+  color: #fff;
+}
+footer a:hover {
+  color: #000;
+}
+
+
+/* ---------- Media Query ---------- */
+@media screen and (max-width:767px) {
+
+  /* ----- SP Navigation ----- */
+  .spnav ul {
+    display: block;
+  }
+  .spnav li {
+    width: auto;
+    border-bottom: 1px solid #c8e5fc;
+    border-left: none;
+    font-size: 14px;
+  }
+
+  /* ----- Contents ----- */
+  .wrapper {
+    display: block;
+  }
+  main, .sidebar {
+    width: auto;
+  }
+  .sidebar {
+    padding: 0;
+    border: none;
+  }
+
+  /* ----- Footer ----- */
+  footer a {
+    font-size: 14px;
+  }
+}

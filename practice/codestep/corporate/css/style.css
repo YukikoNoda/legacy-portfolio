@@ -1,0 +1,512 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, p, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+body {
+  background: #f0f0f0;
+  font-size: 14px;
+}
+.container {
+  padding: 0 3%;
+}
+/* アイコンのとき『line-height: 1px;』書く？
+ aの余白無くなる */
+.logo {
+  width: 80px;
+  line-height: 1px;
+  margin-bottom: 10px;
+}
+.logo a {
+  display: block;
+}
+
+/* ---------- Header ---------- */
+header .inner {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .contact {
+  position: fixed;
+  bottom: 5px;
+  right: 0;
+  opacity: 0.7;
+  display: inline-block;
+  width: 100px;
+  line-height: 50px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ---------- Navigation ---------- */
+nav ul {
+  display: flex;
+}
+nav li {
+  margin-right: 30px;
+}
+
+/* ---------- Mainvisual ---------- */
+.mainvisual {
+  height: calc(100vh - 80px);
+  margin-bottom: 80px;
+  background: url(http://placehold.jp/1920x1280.png) no-repeat center/cover;
+}
+
+/* ------------------------------
+  Main Content
+------------------------------ */
+#index h2 {
+  font-weight: normal;
+  margin-bottom: 34px;
+}
+/* 疑似要素で下線を引く */
+#index h2::after {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #000;
+  display: block;
+}
+#index h2 .en {
+  display: block;
+  font-size: 36px;
+  letter-spacing: 10px;
+  /* 文字間隔 */
+  margin-bottom: 10px;
+}
+#index h2 .ja {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ---------- News ---------- */
+#index .news {
+  margin-bottom: 80px;
+}
+#index .news .list li {
+  margin-bottom: 30px;
+}
+#index .news .list li:last-child {
+  margin-bottom: 0;
+}
+#index .news .list li .date-area {
+  margin-bottom: 16px;
+}
+#index .news .list li p {
+  line-height: 1.3;
+}
+/*「display: inline-block;」で改行せずに幅・高さをもたせる */
+#index .news .list li .date-area span {
+  display: inline-block;
+  width: 50px;
+  margin-left: 10px;
+  line-height: 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ---------- About ---------- */
+#about {
+  margin-bottom: 80px;
+}
+#about .img {
+  margin-bottom: 30px;
+  height: 300px;
+  background: url(http://placehold.jp/1500x700.png) no-repeat center/cover;
+}
+#about .text {
+  padding: 0 3%;
+}
+#about .text p {
+  line-height: 2.2;
+}
+
+/* ---------- Business ---------- */
+#business {
+  margin-bottom: 80px;
+}
+#business .flex .item {
+  margin-bottom: 30px;
+}
+#business .right .item:last-child {
+  margin-bottom: 0;
+}
+#business .flex .title {
+  position: relative;
+  font-weight: bold;
+  margin: 0 0 10px 18px;
+}
+/* 疑似要素でタイトルの横線を引く */
+#business .flex .title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  width: 8px;
+  height: 1px;
+  background-color: #000;
+}
+
+/* ---------- Company ---------- */
+#company .text {
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+#company .info dt,
+#company .info .add {
+  margin-bottom: 5px;
+}
+#company .info dd {
+  margin-bottom: 20px;
+  padding-left: 14px;
+}
+#company .info dd.add1 {
+  margin-bottom: 5px;
+}
+#company .img img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #fff;
+}
+footer .flex {
+  padding: 40px 0;
+}
+footer .info p {
+  line-height: 1.5;
+}
+footer .copy {
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (min-width:768px) {
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 100px;
+    margin-right: 60px;
+  }
+  /* ---------- Header ---------- */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 960px;
+  }
+  header .contact {
+    position: static;
+    width: 200px;
+    line-height: 80px;
+    opacity: 1;
+  }
+  header .contact:hover {
+    background-color: #333;
+  }
+
+  /* ---------- Navigation ---------- */
+  nav a:hover {
+    opacity: 0.6;
+  }
+
+  /* ---------- Main Visual ---------- */
+  .mainvisual {
+    margin-bottom: 120px;
+  }
+
+  /* ------------------------------
+  Main Content
+  ------------------------------ */
+  h2 {
+    margin-bottom: 50px;
+  }
+  h2 .ja {
+    margin-bottom: 36px;
+  }
+
+  /* ---------- News ---------- */
+  #index .news {
+    margin-bottom: 120px;
+  }
+  #index .news .list {
+    display: flex;
+    justify-content: space-between;
+  }
+  #index .news .list li {
+    width: calc(100% / 3);
+    border-right: solid 1px #000;
+    padding: 10px 20px;
+  }
+  #index .news .list li:first-child {
+    padding-left: 0;
+  }
+  #index .news .list li:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  /* ---------- About ---------- */
+  #about {
+    display: flex;
+    margin-bottom: 120px;
+  }
+  #about .img {
+    width: 55%;
+    height: 400px;
+  }
+  #about .text {
+    width: 45%;
+    padding: 180px 5% 0;
+    box-sizing: border-box;
+  }
+
+  /* ---------- Business ---------- */
+  #business {
+    margin-bottom: 120px;
+  }
+  #business .flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+  #business .flex .left {
+    width: 46%;
+    padding-top: 100px;
+  }
+  #business .flex .right {
+    width: 46%;
+  }
+  #business .flex .item {
+    margin-bottom: 50px;
+  }
+  #business .flex .item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---------- Company ---------- */
+  /* 子要素の「position: absolute;」で高さがなくなるから、
+「height: 750px;」を指定して高さを確保 */
+  #company {
+    position: relative;
+    display: flex;
+    height: 750px;
+  }
+  #company .text {
+    box-sizing: border-box;
+    width: 55%;
+    padding: 100px 8% 100px 6%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #company .info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #company .info dt,
+  #company .info dd,
+  #company .info dd.add1,
+  #company .info .add {
+    margin-bottom: 15px;
+  }
+  #company .info dt {
+    width: 20%;
+  }
+  #company .info dd {
+    width: 80%;
+    padding: 0;
+  }
+  #company .info .add {
+    margin-left: 20%;
+  }
+  #company .img {
+    position: absolute;
+    width: 53%;
+    top: 115px;
+    right: 0;
+  }
+
+  /* ---------- Footer ---------- */
+  footer .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+/* ==============================
+  news.html
+============================== */
+#news h2 {
+  font-weight: normal;
+  padding: 70px 0;
+  font-size: 36px;
+  /* 文字間隔 */
+  letter-spacing: 15px;
+}
+#news main {
+  margin-bottom: 100px;
+}
+#news .list li {
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+}
+#news .list li .date-area {
+  margin-bottom: 10px;
+}
+#news .list li p {
+  line-height: 1.3;
+}
+/*「display: inline-block;」で改行せずに幅・高さをもたせる */
+#news .list li .date-area span {
+  display: inline-block;
+  width: 50px;
+  margin-left: 10px;
+  line-height: 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+#news .tab {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+#news .news, #news .press {
+  display: block;
+  width: 50%;
+  padding-bottom: 15px;
+  text-align: center;
+}
+#news .news {
+  border-bottom: 5px solid #000;
+}
+#news .press {
+  border-bottom: 3px solid #666;
+}
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (min-width:768px) {
+
+  #news .tab {
+    justify-content: flex-start;
+  }
+  #news .news {
+    width:350px;
+  }
+  #news .press {
+    width: calc(960px - 350px);
+    padding-left: 100px;
+    text-align: left;
+  }
+}
+
+
+/* ==============================
+  contact.html
+============================== */
+#contact h2 {
+  font-weight: normal;
+  padding: 70px 0 40px;
+  font-size: 36px;
+  /* 文字間隔 */
+  letter-spacing: 15px;
+}
+#contact .contact p {
+  margin-bottom: 50px;
+  line-height: 1.5;
+}
+#contact .contact dl {
+  margin-bottom: 30px;
+}
+#contact .contact dt {
+  margin-bottom: 10px;
+}
+#contact .contact dd {
+  margin-bottom: 20px;
+}
+#contact .contact dd input,
+#contact .contact dd textarea {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  box-sizing: border-box;
+}
+#contact .contact dd input {
+  height: 50px;
+}
+#contact .contact dd textarea {
+  height: 150px;
+}
+#contact .contact span {
+  color: #f00;
+}
+
+/* Button */
+#contact .contact .button {
+  text-align: center;
+}
+#contact .contact .button input {
+  width: 150px;
+  padding: 15px;
+  border: solid 1px #000;
+  background: #f0f0f0;
+  color: #000;
+  margin-bottom: 100px;
+}
+/* ********************
+  Media Query
+******************** */
+@media screen and (min-width:768px) {
+
+  #contact .contact .button input:hover {
+    background: #24292e;
+    color: #fff;
+  }
+}

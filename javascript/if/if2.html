@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.">
+  <title>if文で偶数・奇数判別</title>
+</head>
+
+<body>
+  <h1>偶数・奇数判別</h1>
+  <p>ボタンを押して、1以上の数字を入力してください。</p>
+  <button onclick="result()">判別する</button>
+  <h2 id="ans">ここに表示</h2>
+
+  <script>
+  function result() {
+
+    let num = prompt(`1以上の半角数字を整数で入力してください`);
+    num = parseInt(num);
+    const element = document.getElementById("ans");
+
+    // 非数または0以下の数字は判別できないと表示する
+    if ( isNaN(num) || num <= 0) {
+      element.textContent = `判別できません。`;
+      element.style.color = "#900";
+    } else if (num % 2 === 0) {
+      element.textContent = `${num}は、偶数です。`;
+    } else {
+      element.textContent = `${num}は、奇数です。`;
+    }
+  }
+  
+  </script>
+</body>
+</html>

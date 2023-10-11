@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>DOMの操作 -テキスト-</title>
+</head>
+
+<body>
+  <h1 id="dom">DOMの操作</h1>
+  <button onclick="dom_start()">実行</button>
+
+  <script>
+  function dom_start(){
+
+  // DOMを取得
+  const element = document.getElementById('dom');
+  element.textContent = 'DOM操作でテキストを書き換えました'
+  element.style.color= "#f00";
+  }
+
+  </script>
+</body>
+</html>

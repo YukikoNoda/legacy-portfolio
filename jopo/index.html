@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>日本海洋保護機構 (JOPO)</title>
+  <meta name="description" content="日本海洋保護機構は海洋生物多様性の保全や持続可能な資源利用のルールを定め、自然保護活動に努めています。">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>日本海洋保護機構 (JOPO)</h1>
+
+      <!-- PC Navigation -->
+      <nav class="pcnav">
+        <ul>
+          <li><a href="#">JOPOとは？</a></li>
+          <li><a href="#">海の生物</a></li>
+          <li><a href="#">ニュース</a></li>
+          <li><a href="#">ギャラリー</a></li>
+          <li><a href="#">お問合せ</a></li>
+        </ul>
+      </nav>
+    </div><!-- /.container -->
+  </header>
+
+  <!-- Hamburger -->
+  <div class="btn"><i class="fas fa-bars"></i></div>
+
+  <!-- SP Navigation -->
+  <nav class="spnav">
+    <ul>
+      <li><a href="#">JOPOとは？</a></li>
+      <li><a href="#">海の生物</a></li>
+      <li><a href="#">ニュース</a></li>
+      <li><a href="#">ギャラリー</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Key Visual -->
+  <div class="keyVis">
+    <p class="container">海洋生物多様性の<br>
+      保全や持続可能な<br class="br">資源利用のルールを定め、<br>
+      自然保護活動に努めています。</p>
+  </div>
+
+  <!-- ***** Contents ***** -->
+  <div class="container wrap">
+    <!-- Main Content -->
+    <main>
+      <section>
+        <h2><i class="fas fa-icicles"></i>減少し続ける南極の氷?</h2>
+        <img src="img/photo01.jpg" alt="南極の画像">
+        <p>一面の氷の世界の南極。けれど、そんな厳しい環境下でも、実は周辺では生態系が存在しています。</p>
+        <p>ペンギン、クジラ、アザラシなどのほか、短い夏には植物が小さな花を咲かせることもあります。</p>
+        <p><a class="more" href="#"><i class="fas fa-caret-right"></i>詳細を見る</a></p>
+      </section>
+
+      <section>
+        <h2><i class="fas fa-temperature-low"></i>今年の世界の海の水温予想は？</h2>
+        <img src="img/photo02.jpg" alt="氷山の画像">
+        <p>近年、世界的な海水温上昇が指摘されていますが、今年はどのような状態が予想されるでしょうか？</p>
+        <p>JOPOではアンケートを実施しました。その結果によって見えてきた、世界の海が抱えている現状を検証したいと思います。</p>
+        <p><a class="more" href="#"><i class="fas fa-caret-right"></i>詳細を見る</a></p>
+      </section>
+
+      <section>
+        <h2><i class="fas fa-file-signature"></i>JOPOのマスコット名前大募集</h2>
+        <img src="img/logo.jpg" alt="JOPOのマスコット画像">
+        <p>JOPOのマスコットのペンギンに名前をつけよう！</p>
+        <p>新しいマスコットが登場しました。是非可愛らしい名前をつけて下さい。当選者にはオリジナルグッズをプレゼント！</p>
+        <p><a class="more" href="#"><i class="fas fa-caret-right"></i>詳細を見る</a></p>
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <section>
+        <h2>関連リンク</h2>
+        <ul>
+          <li><a href="#">国土交通省</a></li>
+          <li><a href="#">海上保安庁</a></li>
+          <li><a href="#">環境省</a></li>
+          <li><a href="#">WWFジャパン</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>更新情報</h2>
+        <dl>
+          <dt>2021.10.12</dt>
+          <dd><a href="#">マスコット名前募集開始しました。</a></dd>
+          <dt>2021.08.25</dt>
+          <dd><a href="#">海洋博に出展しました。</a></dd>
+          <dt>2021.06.07</dt>
+          <dd><a href="#">テレビニュースに取り上げられました。</a></dd>
+        </dl>
+      </section>
+    </div><!-- /.sidebar -->
+  </div><!-- /.container .wrap -->
+
+  <!-- Footer -->
+  <footer>
+    <p class="container"><small>Copyright &copy; JOPO All rights reserved.</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $('.btn').on('click', function(){
+      $('.spnav').slideToggle();
+    });
+  </script>
+</body>
+
+</html>

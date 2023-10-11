@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+/* ---------- リセットCSS ---------- */
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit
+}
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Header ---------- */
+header {
+  float: left;
+  width: 200px;
+  height: 100vh;
+  background-color: #ebe0cc;
+  position: relative;
+}
+h1 img {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  filter: drop-shadow(2px 2px 2px #fda1c9);
+}
+
+/* Navigation
+-------------------------------------------------- */
+.btn,
+nav {
+  display: none;
+}
+
+/* ---------- * topへ戻る ---------- */
+.top {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  text-align: center;
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+.top i {
+  display: block;
+  padding-top: 5px;
+  font-size: 1.2em;
+}
+
+/* -------------------- */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ph {
+  height: calc(100vh / 2);
+}
+.topL, .topR {
+  width: calc(100% / 2);
+}
+.btmL, .btmM, .btmR {
+  width: calc(100% / 3);
+}
+.container i {
+  padding-right: 10px;
+}
+
+/* ----- 各画像設定 ----- */
+.topL {
+  background: url(../img/image01.jpg) no-repeat center/cover;
+}
+.topR {
+  background: url(../img/image02.jpg) no-repeat center/cover;
+}
+.btmL {
+  background: url(../img/image11.jpg) no-repeat center/cover;
+}
+.btmM {
+  background: url(../img/image12.jpg) no-repeat center/cover;
+}
+.btmR {
+  background: url(../img/image13.jpg) no-repeat center/cover;
+}
+
+/* テキスト */
+.caption {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 3px 3px 3px #333;
+  transition: 300ms;
+  opacity: 0;
+  padding-top: 25vh;
+  height: 50vh;
+}
+.caption:hover {
+  opacity: 1;
+}
+.caption h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.caption p {
+  line-height: 1.4;
+  width: 80%;
+  margin: auto;
+  font-size: 13px;
+}
+
+/* ---------------------
+Main-content
+--------------------- */
+.welcome {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 100px 3%;
+  text-align: center;
+}
+.welcome h2, .access h2 {
+  padding: 10px 0;
+  box-shadow: 0 0 20px #C1272D;
+  letter-spacing: 10px;
+}
+.welcome > p {
+  padding: 50px 0;
+  line-height: 1.7;
+}
+.welcome .service {
+  display: flex;
+  justify-content: space-between;
+}
+.welcome .service section {
+  width: 31%;
+}
+.welcome a {
+  display: block;
+}
+.welcome i {
+  width: 130px;
+  line-height: 130px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  background-color: #C1272D;
+  color: #fff;
+  font-size: 50px;
+  transition: 300ms;
+}
+.welcome a:hover i {
+  background-color: #081d69;
+}
+.welcome h3 {
+  margin-bottom: 30px;
+  color: #041f81;
+}
+.welcome .service p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Access
+---------------------------------------- */
+.access {
+  padding-bottom: 100px;
+}
+.access .head {
+  max-width: 1020px;
+  margin: 0 auto 50px;
+  padding: 0 3%;
+  text-align: center;
+}
+.map {
+  padding-bottom: 30%;
+  position: relative;
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer
+---------------------------------------- */
+footer {
+  padding: 50px 0;
+  background-color: #C1272D;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* ****************************************
+  Media Query
+**************************************** */
+@media screen and (max-width: 1000px) {
+
+  /* Header
+  ---------------------------------------- */
+  header {
+    float: none;
+    width: auto;
+    height: 100px;
+  }
+  h1 img {
+    width: 80px;
+  }
+
+  /* Humberger
+  ---------------------------------------- */
+  .btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .btn i {
+    line-height: 50px;
+    display: block;
+    font-size: 35px;
+  } 
+  .btn.close i:first-child {
+    display: none;
+  }
+  
+  /*  Navigation 
+  -------------------------------------------------- */
+  nav {
+    position: absolute;
+    width: 100%;
+    height: calc(80vh - 57px);
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+  nav li {
+    line-height: calc((80vh - 57px) / 5);
+    font-size: 24px;
+  }
+  nav a {
+    display: block;
+    color: #fff;
+  }
+  nav i {
+    padding-right: 10px;
+  }
+
+  /* Hero-image
+------------------------------- */
+  .ph {
+    height: calc((100vh - 100px) / 2);
+  }
+  .caption {
+    width: 80%;
+    height: 110px;
+    margin: 25vh auto 0;
+    padding: 10px;
+    border: 1px solid #fff;
+    opacity: 1;
+  }
+  .caption h2 {
+    margin-bottom: 10px;
+  }
+  .caption p {
+    width: auto;
+  }
+}
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (max-width:767px) {
+
+  .container {
+    flex-direction: column;
+  }
+  .ph {
+    width: auto;
+  }
+
+  /* ------------------------------
+  Main Content
+------------------------------ */
+  .welcome {
+    padding: 30px 3%;
+    text-align: center;
+  }
+  .welcome .service {
+    display: block;
+  }
+  .welcome .service section {
+    width: auto;
+  }
+  .welcome > p {
+    padding: 20px 0;
+    text-align: justify;
+  }
+  .welcome>p br {
+    display: none;
+  }
+  .welcome i {
+    margin-bottom: 20px;
+  }
+  .welcome h3 {
+    margin-bottom: 10px;
+  }
+  .welcome .service p {
+    margin-bottom: 20px;
+  }
+
+  /* Access
+  ---------------------------------------- */
+  .access {
+    padding-bottom: 30px;
+  }
+  .access .head {
+    margin-bottom: 20px;
+  }
+  .map {
+    padding-bottom: 60%;
+  }
+
+  /* Footer
+---------------------------------------- */
+  footer {
+    padding: 20px 0;
+  }
+}

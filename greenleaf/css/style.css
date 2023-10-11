@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+.container {
+  max-width: 760px;
+  margin: auto;
+}
+p {
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+  padding: 30px 30px 100px;
+  box-sizing: border-box;
+  background: url(../img/sky.jpg) no-repeat center/cover;
+  color: #fff;
+}
+h1 {
+  background: url(../img/logo.gif) no-repeat;
+  /* 隠し文字 */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ---------- Navigation ---------- */
+nav ul {
+  display: flex;
+  background: #005087;
+}
+nav li {
+  width: 120px;
+  border-right: 1px solid #fff;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+nav a {
+  display: block;
+  color: #fff;
+}
+nav a:hover {
+  background: #017acd;
+}
+
+/* SP Menu */
+.sp-btn {
+  display: none;
+  height: 50px;
+  background: linear-gradient(#017acd, #005087);
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  text-align: center;
+}
+.sp-btn i {
+  color: #fff;
+  font-size: 32px;
+  line-height: 46px;
+}
+
+/* ---------- Main Content ---------- */
+.content {
+  max-width: 564px;
+  margin: 30px auto;
+}
+.content h2 {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  background: url(../img/bar-darkblue.png) no-repeat center/contain;
+  color: #fff;
+  font-size: 16px;
+  line-height: 46px;
+}
+.content p {
+  margin-bottom: 30px;
+}
+.content-item {
+  margin-bottom: 60px;
+}
+.content-item h3 {
+  margin-bottom: 10px;
+  padding-left: 28px;
+  background: url(../img/maru-skyblue.png) no-repeat left center;
+  font-size: 16px;
+  line-height: 20px;
+}
+.content-item p {
+  overflow: hidden;
+}
+
+/* 画像配置 */
+.content-item img {
+  max-width: 50%;
+}
+.content-item .photo-odd {
+  float: right;
+  margin-left: 15px;
+}
+.content-item .photo-even {
+  float: left;
+  margin-right: 15px;
+}
+
+/* ---------- Fooer ---------- */
+footer {
+  padding: 30px 0 40px;
+  background: #005087;
+  color: #fff;
+  text-align: center;
+}
+
+/* ********** Media Query ********** */
+@media screen and (max-width:564px) {
+
+  /* SP Navigation */
+  .sp-btn {
+    display: block;
+  }
+  nav ul {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 80, 135, 0.8);
+    /* 非表示にするため */
+    display: none;
+  }
+  nav li {
+    width: 100%;
+    height: 50px;
+  }
+  nav a {
+    line-height: 50px;
+    border-bottom: 2px solid #fff;
+    box-sizing: border-box;
+  }
+
+  /* Main Content */
+  .content {
+    padding: 0 10px;
+  }
+  .content-item .photo-odd, .content-item .photo-even {
+    max-width: 100%;
+    display: block;
+    float: none;
+    margin: 0 auto 20px;
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>DOMの操作 -HTML-</title>
+</head>
+
+<body>
+  <h1 id="dom">DOMの操作</h1>
+  <p id="image">画像を挿入</p>
+  <button onclick="dom_start()">実行</button>
+
+  <script>
+  function dom_start(){
+
+  //DOMの操作
+  const image = document.getElementById('image');
+  image.innerHTML = '<img src="cat.jpg" alt="画像">';
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九九一覧表</title>
+
+  <style>
+    html, body, h1, table, th, td {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    h1 {
+      padding: 30px 0;
+      text-align: center;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      width: 70px;
+      height: 60px;
+      border: 1px solid #999;
+      font-size: 20px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    th {
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>九九一覧表</h1>
+
+  <table>
+    <script>
+      // 1行目の倍率を記述 
+      // iは列を示す
+      document.write('<tr>');
+      document.write(`<th>&nbsp;</th>`);
+      for (let i = 1; i <= 9; i++) {
+        document.write('<th>');
+        document.write(`x${i}`);
+        document.write('</th>');
+      }
+
+      // jは行、k列を示す
+      // 1行ずつ書いていく
+      document.write('</tr>');
+      for (let j = 1; j <= 9; j++) {
+        document.write('<tr>');
+        document.write('<th>');
+        document.write(`${j}の段`);
+        document.write('</th>');
+        for (let k = 1; k <= 9; k++) {
+          document.write('<td>');
+          document.write(j * k);
+          document.write('</td>');
+        }
+        document.write('</tr>');
+      }
+    </script>
+  </table>
+
+</body>
+
+</html>

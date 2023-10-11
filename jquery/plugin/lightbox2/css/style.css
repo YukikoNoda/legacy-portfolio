@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* リセットcss */
+html, body, h1, ul, li {
+margin: 0;
+padding: 0;
+line-height: 1;
+}
+ul {
+list-style: none;
+}
+img {
+max-width: 100%;
+height: auto;
+border: none;
+vertical-align: bottom;
+}
+/* 共通css */
+.container {
+width: 700px;
+margin: 50px auto;
+}
+.container h1{
+margin-bottom: 20px;
+text-align: center;
+}
+.container ul {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.container ul li {
+margin-bottom: 20px;
+transition: 0.5s;
+}
+.container ul li:hover {
+opacity:0.8;
+}

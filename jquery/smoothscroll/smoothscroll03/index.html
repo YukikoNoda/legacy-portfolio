@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>smoothscroll-3</title>
+  <meta name="description" content="スムーススクロールの練習です">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>smoothscroll-3</h1>
+
+    <!-- Main Visual -->
+    <p><img src="img/image.jpg" alt="ドーナツ画像"></p>
+  </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul class="g-nav">
+        <li><a href="#menu01">menu01</a></li>
+        <li><a href="#menu02">menu02</a></li>
+        <li><a href="#menu03">menu03</a></li>
+        <li><a href="#menu04">menu04</a></li>
+        <li><a href="#menu05">menu05</a></li>
+      </ul>
+    </nav>
+
+
+  <!-- Main Content -->
+  <main>
+    <div id="menu01" class="menu-box menu01">menu01-contents</div>
+    <div id="menu02" class="menu-box menu02">menu02-contents</div>
+    <div id="menu03" class="menu-box menu03">menu03-contents</div>
+    <div id="menu04" class="menu-box menu04">menu04-contents</div>
+    <div id="menu05" class="menu-box menu05">menu05-contents</div>
+  </main>
+
+  <div class="page-top"><a href="#">TOP</a></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><small>smoothscroll &copy;</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      //topボタンを消しておく
+      $('.page-top').hide();
+
+      // スムーススクロール
+      $('.page-top').on('click', function () {
+        // とび先を指定 ブラウザによって異なるから2つ書くのが無難
+        $('html,body').animate(
+          // {}の内側は"位置"、外側は"速度"を指定
+          { scrollTop: 0 }, 500);
+        // aタグの機能をストップするため
+        return false;
+      });
+
+      // スクロールを検出する
+      $(window).on('scroll', function () {
+        // スクロール位置が取得できる
+        const scTop = $(window).scrollTop();
+        // console.log(scTop);
+
+        // ある程度スクロールしたらTOPを表示
+        if (300 < scTop) {
+          $('.page-top').fadeIn();
+        } else if (300 > scTop) {
+          $('.page-top').fadeOut();
+        }
+      });
+
+    // ------------------------------
+
+      // ナビゲーションをクリックしたら
+      $('.g-nav li a').on('click', function () {
+
+        // とび先を取得 attr:(アトリビュート)、属性値を取得
+        const target = $(this).attr('href');
+        // console.log(target);
+
+        // とび先までの距離
+        const position = $(target).offset();
+        // console.log(position);
+
+        // 取得した距離をアニメーションする positionのtopの位置まで
+        $('html,body').animate({ scrollTop: position.top }, 500)
+
+        //aタグの機能を抑制
+        return false;
+      });
+
+    });
+
+  </script>
+
+</body>
+
+</html>

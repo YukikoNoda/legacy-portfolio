@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* リセットcss */
+html, body, h1, ul ,li {
+margin: 0;
+padding: 0;
+line-height: 1;
+}
+ul {
+list-style: none;
+}
+img {
+max-width: 100%;
+height: auto;
+border: none;
+vertical-align: bottom;
+}
+
+/* 共通css */
+.container {
+width: 960px;
+margin: 50px auto;
+}
+.container h1{
+margin-bottom: 20px;
+text-align: center;
+}
+
+.bx-wrapper {
+margin-bottom: 20px;
+box-shadow: none;
+border: none;
+}
+
+.container .slide li {
+height: 300px;
+}
+.container .slide .image01 {
+background: url(../img/image01.jpg) no-repeat;
+}
+.container .slide .image02 {
+background: url(../img/image02.jpg) no-repeat;
+}
+.container .slide .image03 {
+background: url(../img/image03.jpg) no-repeat;
+}
+.container .slide .image04 {
+background: url(../img/image04.jpg) no-repeat;
+}

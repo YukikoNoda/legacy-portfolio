@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* ---------- リセットCSS ---------- */
+html, body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Header ---------- */
+.header {
+  height: calc(100vh - 50px);
+  background: url(../img/image.jpg) no-repeat center/cover;
+  color: #fff;
+  text-shadow: 5px 5px 5px #262338;
+}
+.header h1 {
+  padding: 100px 0 30px;
+  font-size: 80px;
+  letter-spacing: 7px;
+  font-family: 'Kaushan Script', cursive;
+}
+.header p {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+/* ---------- Navigation ---------- */
+.pcnav ul {
+  display: flex;
+  justify-content: center;
+}
+.pcnav li {
+  width: calc(750px /5);
+  line-height: 50px;
+  font-weight: bold;
+}
+.pcnav li a {
+  display: block;
+}
+
+.sp-btn, .spnav {
+  display: none;
+}
+
+/* ********************
+Media Query
+******************** */
+@media screen and (max-width:767px) {
+
+  /* Header */
+  .header {
+    height: 100vh;
+  }
+  .header h1 {
+    font-size: 60px;
+  }
+  .header p {
+    font-size: 24px;
+  }
+  /* PC Navigation */
+  .pcnav {
+    display: none;
+  }
+
+  /* SP Navigation */
+  .spnav {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    box-sizing: border-box;
+    background: #fff;
+    opacity: 0;
+    transition: 500ms;
+  }
+  .spnav.show {
+    opacity: 1;
+  }
+  .spnav li {
+    font-size: 22px;
+    line-height: 60px;
+  }
+
+  /* SP Button */
+  .sp-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 45px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 45px;
+    cursor: pointer;
+  }
+  .sp-btn i {
+    display: block;
+  }
+  .sp-btn i:last-child {
+    color: #262338;
+  }
+  .sp-btn.open i:first-child {
+    display: none;
+  }
+}

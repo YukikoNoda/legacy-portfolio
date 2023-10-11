@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Herb Kitchen-オリジナルレシピ</title>
+  <meta name="description" content="ハーブキッチンはイタリアの家庭料理を紹介するサイトです。タコのカルパッチョとしらすのペペロンチーノのオリジナルレシピを紹介します。">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Herb Kitchen</h1>
+      <p>イタリアの家庭料理を紹介するサイトです。</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="pcnav">
+    <ul class="container">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">オリジナルレシピ</a></li>
+      <li><a href="#">お勧め料理</a></li>
+      <li><a href="#">定番メニュー</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </nav>
+
+  <!-- SPnav -->
+    <nav class="spnav">
+    <ul class="container">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">オリジナルレシピ</a></li>
+      <li><a href="#">お勧め料理</a></li>
+      <li><a href="#">定番メニュー</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hamburger -->
+  <div class="btn"><span></span></div>
+
+  <!-- TOPへ戻るボタン -->
+  <p class="top"><i class="fa-solid fa-angle-up"></i>TOP</p>
+
+  <!-- Contents -->
+  <div class="container wrap">
+    <!-- Main Content -->
+    <main>
+      <section>
+        <h2>オリジナルレシピ</h2>
+        <section class="disc">
+          <h3>タコのカルパッチョ</h3>
+          <p><img src="img/salad.jpg" alt="タコのカルパッチョの画像">たこは低脂肪、低カロリーなだけでなく、コレステロールの上昇を抑える働きのあるタウリンが含まれます。<br>
+            レモン果汁などさわやかな酸味、セロリやかいわれ菜などの香りのある野菜を上手に加えると、塩分を抑えてもおいしいおつまみになります。</p>
+          <p class="more"><a href="#">詳細を見る</a></p>
+        </section>
+        <section class="disc">
+          <h3>しらすのペペロンチーノ</h3>
+          <p><img src="img/pasta.jpg" alt="しらすのペペロンチーノの画像">おうちでのランチはお手軽にすませたいですよね♪かつ、美味しければなおうれしい！今回は、ごはんの友のしらすを使った簡単パスタ、しらすのペペロンチーノをご紹介します。<br>
+            味付けはしらすの塩気とパスタの茹で汁を使います。ソースをあらかじめ作って茹で上がったパスタを絡めるので失敗知らずですよ。</p>
+          <p class="more"><a href="#">詳細を見る</a></p>
+        </section>
+      </section>
+    </main>
+
+    <div class="sidebar">
+      <!-- Category Menu -->
+      <section>
+        <h2>カテゴリー</h2>
+        <ul>
+          <li><a href="#">サラダ</a></li>
+          <li><a href="#">アンティパスタ</a></li>
+          <li><a href="#">海鮮料理</a></li>
+          <li><a href="#">肉料理</a></li>
+          <li><a href="#">デザート</a></li>
+        </ul>
+      </section>
+
+      <!-- Banner -->
+      <a href="#">
+        <img src="img/banner.jpg" alt="Herbal lifeの広告バナー">
+      </a>
+    </div><!-- /.sidebar -->
+  </div><!-- /.container .wrap -->
+
+  <!-- Footer -->
+  <footer>
+    <p class="container">
+      <small>Copyright &copy; Herb Kitcten All rights reserved.</small>
+    </p>
+  </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // touchstartでも可能
+    $(function () {
+      $('.btn').on('click touchstart', function () {
+        $(this).toggleClass('open');
+        $('.spnav').fadeToggle();
+      });
+    });
+
+    //変数宣言
+    const Top = $('.top');
+    //ボタンを非表示
+    Top.hide();
+    //300pxスクロールで表示、以下で非表示
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 300) {
+        Top.fadeIn();
+      } else {
+        Top.fadeOut();
+      }
+    });
+    // ボタンクリックでトップへ戻る
+    Top.on('touchstart click', function () {
+      $('html,body').animate({ scrollTop: 0 }, 'swing')
+    });
+  </script>
+</body>
+
+</html>

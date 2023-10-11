@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Work - Portfolio</title>
+  <meta name="description" content="My Work - Portfolioの練習サイトです">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="index">
+  <!-- Header -->
+  <header>
+    <h1><a href="index.html"><img src="img/logo.svg" alt="My Work"></a></h1>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img class="icon" src="./img/icon-instagram.png" alt="インスタグラム">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Main Visual -->
+    <!-- HTMLでレスポンシブに画像を切り替える -->
+    <picture class="mainvisual">
+      <source media="(max-width: 767px)" srcset="http://placehold.jp/640x760.png">
+      <img src="http://placehold.jp/1920x420.png" alt="テキストテキストテキスト">
+    </picture>
+
+    <!-- Works -->
+    <section class="works container">
+      <h2>Works</h2>
+      <ul>
+        <li><img src="http://placehold.jp/640x417.png" alt="画像"></li>
+        <li><img src="http://placehold.jp/640x417.png" alt="画像"></li>
+        <li><img src="http://placehold.jp/640x417.png" alt="画像"></li>
+        <li><img src="http://placehold.jp/640x417.png" alt="画像"></li>
+        <li><img src="http://placehold.jp/640x417.png" alt="画像"></li>
+        <li><img src="http://placehold.jp/640x417.png" alt="画像"></li>
+      </ul>
+      <p class="more"><a href="works.html">See More</a></p>
+    </section>
+
+    <!-- News -->
+    <section class="news container">
+      <h2>News</h2>
+      <dl>
+        <dt>2020.XX.XX</dt>
+        <dd>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</dd>
+        <dt>2020.XX.XX</dt>
+        <dd>ＸＸ月ＸＸ日から写真集「ＸＸＸＸＸＸＸ」の販売を開始します。</dd>
+        <dt>2019.XX.XX</dt>
+        <dd>【イベント開催のお知らせ】テキストテキストテキストテキストテキストテキストテキスト</dd>
+      </dl>
+      <p class="more"><a href="news.html">See More</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p><small>&copy; 2020 My Work</small></p>
+  </footer>
+</body>
+
+</html>

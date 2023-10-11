@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/* リセットcss */
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* -------------------- */
+.wrapper {
+  max-width: 960px;
+  margin: 50px auto;
+}
+.modal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}

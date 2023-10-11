@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>スライドアニメーション</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body, h1, ul, li {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    ul {
+      list-style: none;
+    }
+    html {
+      overflow-y: scroll;
+    }
+
+    /* .container
+---------------------------------- */
+    .container {
+      width: 400px;
+      margin: 50px auto;
+    }
+    .container h1 {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .container li:hover {
+      background: rgb(231, 192, 192);
+      cursor: pointer;
+    }
+    .box {
+      height: 400px;
+      background: rgb(255, 186, 57);
+      text-align: center;
+    }
+    .btn {
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      background: rgb(243, 134, 134);
+      border: 1px solid rgb(129, 111, 111);
+      color: #fff;
+    }
+    .btn-open {
+      background: rgb(235, 46, 46);
+    }
+    .header {
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .g-nav {
+      background: rgb(126, 117, 35);
+    }
+    .g-nav li {
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #fff;
+      box-sizing: border-box;
+    }
+    .g-nav a {
+      display: block;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>slide練習2</h1>
+      <div class="btn">MENU</div>
+    </header>
+
+    <nav class="g-nav">
+      <ul>
+        <li><a href="#">nav01</a></li>
+        <li><a href="#">nav02</a></li>
+        <li><a href="#">nav03</a></li>
+        <li><a href="#">nav04</a></li>
+        <li><a href="#">nav05</a></li>
+      </ul>
+    </nav>
+  </div><!-- /.container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      // .btnをclickしたら
+      $('.btn').on('click', function () {
+        // navが表示・非表示
+        $('.g-nav ul').slideToggle();
+
+        // 自分にclass名「btn-open」を付ける・外す
+        $(this).toggleClass('btn-open');
+      });
+    });
+  </script>
+</body>
+
+</html>

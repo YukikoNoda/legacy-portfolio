@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+/* リセットCSS
+---------------------------------------- */
+html, body, h1, h2, p, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: Meiryo, "Hiragino Kaku Gothic ProN", Yu Gothic, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* 共通CSS
+---------------------------------------- */
+.container {
+  margin: auto;
+}
+
+/* Header
+---------------------------------------- */
+.header {
+  text-align: center;
+}
+
+/* Main Content
+---------------------------------------- */
+.main {
+
+  .section {
+   
+    .inner-section {
+      display: flex;
+      flex-direction: column;
+
+    .ph {
+      order: -1;
+    }
+
+    .section-title {
+      margin: 2.3% 2.3% 3.12%;
+      padding: 0.78% 0.5% 0.78% 0.9%;
+      background-color: #ff7d73;
+      border-radius: 2px;
+
+      h2 {
+        padding-top: 2px;
+        border-left: 2.5px solid #ffe073;
+
+        a {
+          display: block;
+          margin-left: 1%;
+          padding-bottom: 2px;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          color: #fff;
+          font-size: 18px;
+          font-weight: normal;
+          line-height: 1.05;
+        }
+      }
+    }
+  }
+  }
+
+  .inner-content {
+    margin:0 2.3% 7.03%;
+
+    .price {
+      text-align: right;
+      margin-bottom: 3.43%;
+
+      p {
+        &:first-child {
+          font-size: 14px;
+
+          .num {
+            color: #f00;
+            font-size: 38px;
+            font-weight: bold;
+          }
+
+          .unit {
+            color: #f00;
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    .point {
+      display: flex;
+      margin-bottom: 3.43%;
+      background-color: #ff7d73;
+
+      dt {
+        align-self: center;
+        width: 70px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      dd {
+        width: calc(100% - 70px);
+        padding: 14px 1.6%;
+        background-color: #fff0b9;
+        color: #ff7d73;
+        font-size: 16px;
+        line-height: 1.18;
+      }
+    }
+
+    .point-content {
+      li {
+        position: relative;
+        margin-bottom: 1em;
+        padding-left: 1em;
+        font-size: 11px;
+        line-height: 1.36;
+        letter-spacing: 0.07px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 1.5px;
+          width: 8px;
+          height: 8px;
+          background-color: #ff7d73;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.more {
+  max-width: 360px;
+  width: 180px;
+  line-height: 30px;
+  margin: 0 auto 7.03%;
+  background: url(../images/more.jpg) no-repeat center/cover;
+  text-align: center;
+  transition: 300ms;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  a {
+    display: block;
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: bold;
+    letter-spacing: 0.05px;
+  }
+}
+
+/* Footer
+---------------------------------------- */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2.3%;
+
+  .btn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #ffcbc7;
+    transition: 300ms;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ff7d73;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      border-right: 7px solid transparent;
+      border-bottom: 13px solid #fff;
+      border-left: 7px solid transparent;
+    }
+  }
+}

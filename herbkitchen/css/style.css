@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/* ---------- リセットCSS ---------- */
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+*, ::before, ::after {
+box-sizing: border-box;
+}
+
+/* ---------- 共通CSS ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+/* 2カラム */
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  width: calc(100% * (600 / 960));
+}
+.sidebar {
+  width: calc(100% * (300 / 960));
+}
+
+/* ---------- Header ---------- */
+header {
+  height: 200px;
+  background: url(../img/herbs.jpg) repeat-x center;
+  color: #fff;
+}
+h1 {
+  padding: 30px 0 20px 0;
+  font-size: 80px;
+  font-family: 'Berkshire Swash', cursive;
+}
+header p {
+  font-size: 24px;
+}
+
+/* ---------- PC Navigation ---------- */
+.spnav, .top {
+  display: none;
+}
+.pcnav {
+  margin-bottom: 30px;
+  background: #050;
+}
+.pcnav ul {
+  display: flex;
+}
+.pcnav li {
+  width: calc(100% / 5);
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+}
+.pcnav a {
+  display: block;
+}
+.pcnav a:hover {
+  background: #f50;
+}
+
+/* ---------- Contents ---------- */
+.wrap {
+  margin-bottom: 50px;
+}
+
+/* ----- Main Content ----- */
+/* 見出し(h2,h3) */
+h2 {
+  margin-bottom: 20px;
+  padding: 5px;
+  background: #090;
+  color: #fff;
+}
+h3 {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  border-left: 10px solid #090;
+}
+
+.disc:nth-of-type(1) {
+  border-bottom: 1px dotted #050;
+  margin-bottom: 30px;
+}
+
+main p {
+  margin-bottom: 10px;
+  overflow: hidden;
+  line-height: 1.6;
+}
+main img {
+  float: left;
+  margin-right: 20px;
+}
+
+/* 詳細を見る */
+.more {
+  margin-bottom: 20px;
+  text-align: right;
+}
+.more a {
+  padding: 5px;
+  background: #090;
+  color: #fff;
+  font-size: 14px;
+}
+.more a:hover {
+  background: #f50;
+}
+
+/* ----- Sidebar ----- */
+.sidebar section {
+  margin-bottom: 20px;
+}
+.sidebar li {
+  line-height: 50px;
+}
+.sidebar li a {
+  display: block;
+  padding-left: 10px;
+  border: 1px solid transparent;
+  border-left-width: 15px;
+  border-right-width: 15px;
+}
+.sidebar li a:hover {
+  border-color: #090;
+  border-right-color: #f00;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 20px 0;
+  background: #090;
+  color: #fff;
+}
+
+/* ---------- Media Query ---------- */
+@media screen and (max-width:767px) {
+
+  .spnav ul, .wrap {
+    display: block;
+  }
+
+  /* ----- Header ----- */
+  header {
+  height: 120px;
+  margin-bottom: 20px;
+  background-size: auto 120px;
+  text-align: center;
+  }
+
+  h1 {
+  padding: 20px 0 10px;
+  font-size: 60px;
+  }
+  header p {
+    font-size: 14px;
+  }
+
+  /* ----- SP Navigation ----- */
+  .pcnav {
+  display: none;
+  }
+
+  .spnav {
+  position: absolute;
+  top: 50px;
+  height: calc(80vh - 50px);
+  width: 100%;
+  background: rgba(0, 153, 0, 0.6);
+  }
+  .spnav li {
+  font-weight: bold;
+  line-height: calc((80vh - 50px) / 5);
+  text-align: center;
+  font-size: 26px;
+  }
+
+  .spnav a {
+  display: block;
+  color: #fff;
+  }
+
+  /* SP Button
+  ---------------------------------------- */
+ .btn {
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ height: 40px;
+ width: 40px;
+ cursor: pointer;
+ }
+
+ .btn span, .btn span::before, .btn span::after {
+ content: "";
+ display: block;
+ width: 30px;
+ height: 4px;
+ background-color: #fff;
+ position: absolute;
+ inset: 0;
+ margin: auto;
+ }
+
+ .btn span::before {
+ margin-top: -13px;
+ height: 10px;
+ border-radius: 50% 50% 0 0;
+ }
+
+  .btn span::after {
+  margin-top: 7px;
+  height: 7px;
+  }
+
+  /* Top Button
+  ---------------------------------------- */
+  .top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: block;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: rgba(0, 153, 0, 0.6);
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  }
+  .top i {
+  display: block;
+  }
+
+
+
+  /* ----- Main Content ----- */
+  main, .sidebar {
+    width: auto;
+  }
+  
+  /* 詳細を見る */
+.more {
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #090;
+}
+.more a {
+  display: block;
+  padding: 20px;
+  background: #dfc;
+  color: #090;
+  font-size: 20px;
+}
+.more a:hover {
+  background: none;
+}
+
+  /* ---------- Contents ---------- */
+.wrap {
+  margin-bottom: 30px;
+}
+
+  /* Sidebar */
+  .sidebar li {
+  margin-bottom: 10px;
+}
+.sidebar li a {
+  border: 1px solid #090;
+  border-left-width: 15px;
+  border-right-width: 15px;
+  border-right-color: #f00;
+}
+
+}
+
+@media screen and (max-width: 400px) {
+
+  h1 {
+  font-size: 40px;
+  }
+
+  main img {
+  display: block;
+  float: none;
+  margin: 0 auto 10px;
+  }
+}

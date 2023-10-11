@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像を使用した配列演習</title>
+
+  <style>
+  /* ----- リセットCSS ---------- */
+  html,body,h1,p,ul,li{
+  margin:0;
+  padding:0;
+  line-height: 1;
+  }
+  ul{
+  list-style: none;
+  }
+  img{
+  max-width:100%;
+  vertical-align: bottom;
+  }
+
+/* ----- container --------- */
+.container{
+width:300px;
+margin:30px auto;
+border:3px solid #ccc;
+}
+.container h1 {
+margin: 30px 0;
+font-size:24px;
+text-align: center;
+}
+
+p{
+padding-left:20px;
+margin-bottom:10px;
+}
+.image {
+margin-bottom:30px;
+text-align:center;
+}
+
+button {
+display: block;
+margin: 0 auto;
+margin-bottom:30px;
+}
+ul {
+    margin-bottom:20px;
+}
+li {
+margin-bottom:10px;
+padding-left:20px;
+}
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h1>画像を使用した配列演習</h1>
+
+
+  <p class="image"><img id="season" src="img/spring.jpg" alt="画像"></p>
+  <p>ボタンをクリックして下さい。</p>
+  <button onclick="image_change()">季節の画像</button>
+  <ul>
+    <li>3~5までは春の画像</li>
+    <li>6~8までは夏の画像</li>
+    <li> 9~11までは秋の画像</li>
+    <li>12,1~2までは冬の画像</li>
+  </ul>
+  
+  </div><!-- container -->
+
+  <script>
+  function image_change(){
+
+    // 画像ファイル名の配列
+    const img_file = ['spring.jpg', 'summer.jpg','automn.jpg','winter.jpg'];
+
+    //入力
+    let num = prompt('1~12の数字を入力して下さい。');
+    if ( isNaN(num)) {
+    alert("半角数字を入力して下さい。");
+    } else {
+        num = parseInt(num);
+    }
+    
+    let index = 0;
+    
+    //if文
+    // 3~5までは春の画像
+    if(3 <= num && num <= 5){
+      index = 0;
+
+    // 6~8までは夏の画像
+    }else if(6 <= num && num <= 8 ){
+      index = 1;
+
+    // 9~11までは秋の画像を表示
+    }else if(9 <= num && num <= 11){
+      index = 2;
+
+    // 12,1~2までは秋の画像を表示
+    }else if(num===12 || num <= 2 ){
+      index = 3;
+    }
+
+    // DOM操作
+    const element = document.getElementById('season');
+    element.src = 'img/' + img_file[index];
+  }
+  </script>
+</body>
+
+</html>

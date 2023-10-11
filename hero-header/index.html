@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Header</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Sky Revolution</h1>
+    <p>You are the one that changes the city</p>
+  </header>
+
+  <!-- PC Navigation -->
+  <nav class="pcnav">
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">PROFILE</a></li>
+      <li><a href="#">ACCESS</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </nav>
+  
+  <!-- SP Navigation -->
+  <nav class="spnav">
+    <ul class="g-nav">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">PROFILE</a></li>
+      <li><a href="#">ACCESS</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Button -->
+  <div class="sp-btn">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('.sp-btn').on('click', function () {
+        $(this).toggleClass('open');
+        $('.spnav').toggleClass('show');
+        // ↓これもできる
+        // $('.spnav').fadeToggle();
+      });
+    });
+  </script>
+</body>
+</html>

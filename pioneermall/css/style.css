@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, h3, p, ul, li, dl, dt, dd, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#home header p, #home .keyVis, #home section p {
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+header {
+  padding: 20px 0;
+  background: #365699;
+  color: #fff;
+}
+header .container {
+  align-items: center;
+}
+h1 {
+  padding-left: 58px;
+  background: url(../img/logo-1.png) no-repeat left center;
+  font-size: 22px;
+  line-height: 50px;
+}
+
+/* ---------- Button ---------- */
+.btn {
+  display: none;
+  height: 70px;
+  overflow: hidden;
+  background: linear-gradient(#cdf, #fff);
+  text-align: center;
+}
+.btn i {
+  display: block;
+  color: #365699;
+  font-size: 35px;
+  line-height: 70px;
+}
+.close i:first-child {
+  display: none;
+}
+
+/* ---------- Navigation ---------- */
+/* ----- PC Nav ----- */
+.pcnav .container {
+  padding: 20px 10px;
+  justify-content: flex-start;
+}
+.pcnav li {
+  margin-right: 20px;
+}
+.pcnav a {
+  display: block;
+  padding-bottom: 5px;
+  transition: 300ms;
+}
+.pcnav a:hover {
+  border-bottom: 5px solid #365699;
+  color: #365699;
+}
+.pcnav .current, .pcnav .current:hover {
+  border-bottom: 5px solid #f60;
+  color: #000;
+}
+
+/* ----- SP Nav ----- */
+.spnav {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+.spnav li {
+  line-height: 70px;
+  font-size: 25px;
+  text-align: center;
+}
+.spnav a {
+  display: block;
+  border-bottom: 1px solid #fff;
+  background: rgba(30, 100, 200, 0.8);
+  color: #fff;
+}
+
+/* ----- TOP Button ----- */
+.top {
+position: fixed;
+right: 10px;
+bottom: 10px;
+width: 60px;
+height: 60px;
+border: 2px solid #365699;
+border-radius: 5px;
+background: rgba(255, 255, 255, 0.7);
+color: #365699;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+}
+.top i {
+display: block;
+font-size: 35px;
+}
+
+/* ---------- Key Visual ---------- */
+#home .keyVis {
+  padding: 70px 0;
+  background: url(../img/mall_bg-1.jpg) no-repeat top center/cover;
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000;
+}
+
+/* ---------- Main Contents ---------- */
+/* section内側上下左右余白 */
+#home .mall, #home .service, #home .info {
+  padding: 80px 0;
+}
+
+/* section見出し */
+#home .mall h2, #home .service h2, #home .info h2 {
+  width: 220px;
+  margin: 0 auto 50px;
+  padding: 10px;
+  background: #365699;
+  color: #fff;
+  text-align: center;
+}
+
+/* 3カラム共通 */
+#home .mall section, #home .service section {
+  width: 32%;
+}
+
+/* リンクエリア色変化 */
+#home .mall a, #home .service a h3{
+  display: block;
+  transition: 300ms;
+}
+
+/* ----- Mall ----- */
+#home .mall a:hover {
+  background: #fea;
+}
+#home .mall h3 {
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 5px solid #f60;
+  font-size: 18px;
+}
+#home .mall img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+}
+#home .mall p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* ----- Service ----- */
+#home .service {
+  background: #ddd;
+}
+#home .service h2 {
+  background: #fff;
+  color: #365699;
+}
+#home .service h3 {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: rgba(54, 86, 153, 0.4);
+  color: #fff;
+  text-align: center;
+}
+#home .service a:hover h3{
+  background: rgba(54, 86, 153, 1);
+}
+#home .service i {
+  display: block;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  font-size: 50px;
+}
+
+/* ----- Info ----- */
+#home .info dt {
+  float: left;
+  padding-left: 5px;
+  border-left: 16px solid #f60;
+}
+#home .info dd {
+  margin: 0 0 20px 150px;
+}
+#home .info a:hover {
+  text-decoration: underline;
+}
+#home .info p {
+  width: 300px;
+}
+#home .info img {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 30px 0;
+  background: #365699;
+  color: #fff;
+  text-align: center;
+}
+
+/* ********** Media Query ********** */
+@media screen and (max-width:767px) {
+
+  /* ----- Header ----- */
+  h1 {
+    font-size: 20px;
+  }
+  header p {
+    font-size: 14px;
+  }
+
+  /* ----- SP Navigation ----- */
+  .pcnav {
+    display: none;
+  }
+  .btn {
+    display: block;
+  }
+
+  /* ----- Key Visual ----- */
+  #home .keyVis {
+    padding: 50px 0;
+    font-size: 30px;
+  }
+
+  /* ----- Main Contents ----- */
+  /* section内側上下左右余白 */
+  #home .mall, #home .service, #home .info {
+    padding: 20px 0;
+  }
+
+  /* section見出し */
+  #home .mall h2, #home .service h2, #home .info h2 {
+    margin-bottom: 20px;
+  }
+
+  /* 3カラムを1カラムに/余白調整 */
+  #home .mall .container, #home .service .container {
+    display: block;
+  }
+  #home .mall section, #home .service section {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  /*----- Mall ----- */
+  #home .mall img {
+    height: 400px;
+  }
+
+  /* ----- Service ----- */
+  #home .service section {
+    padding: 20px 0;
+    border: 1px solid #365699;
+    border-radius: 10px;
+    background: #fff;
+  }
+  #home .service h3 {
+  background: rgba(54, 86, 153, 1);
+  }
+  #home .service p {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* ----- Info ----- */
+  #home .info dl {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #home .info dd {
+  line-height: 1.3;
+  }
+  #home .info p {
+    display: none;
+  }
+
+  /* ----- Footer ----- */
+  footer {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width:550px) {
+
+  /* ----- Header ----- */
+  header .container {
+    display: block;
+  }
+  header {
+    padding: 10px 0;
+    text-align: center;
+  }
+  h1 {
+    display: inline-block;
+    padding-left: 45px;
+    background-size: 40px;
+    font-size: 20px;
+  }
+  header p {
+    display: none;
+  }
+
+  /* ----- Key Visual ----- */
+  #home .keyVis {
+    padding: 30px 0;
+    font-size: 20px;
+  }
+
+  /*----- Mall ----- */
+  #home .mall img {
+    height: 250px;
+  }
+
+  /* ----- Service ----- */
+  #home .service h3 {
+    width: 150px;
+    height: 150px;
+  }
+  #home .service i {
+    margin-bottom: 15px;
+    padding-top: 45px;
+    font-size: 40px;
+  }
+  #home .service h3 {
+    font-size: 16px;
+  }
+  #home .service p {
+    max-width: 230px;
+  }
+
+  /* ----- Info ----- */
+  #home .info dd {
+    margin: 0 0 10px 80px;
+  }
+}
+
+
+/* ==============================
+  Mall css
+============================== */
+#mall p {
+  line-height: 1.5;
+}
+
+/* ---------- Key Visual ---------- */
+#mall h2{
+  padding: 50px 0;
+  background: url(../img/durian-header.jpg) no-repeat center/cover;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  }
+  
+  /* ---------- Main Content ---------- */
+  /* 2カラムレイアウト */
+  #mall .main{
+  width: calc(100% * 600 / 960);
+  }
+  #mall .sidebar{
+  width: calc(100% * 300 / 960);
+  }
+  /* コンテンツ上下左右余白 */
+  #mall h2 + .container{
+  padding: 30px 10px 20px;
+  }
+  #mall .main section{
+  margin-bottom:30px;
+  }
+  #mall .main h3{
+  color:#059;
+  background:#cef  url(../img/mall-mark.png) no-repeat 10px center;
+  padding:20px 0 20px 50px;
+  margin-bottom:20px;
+  }
+  #mall .main section p:first-of-type{
+  margin-bottom: 10px;
+  }
+  /* Shop Info h4見出し */
+  #mall .main h4{
+  margin-bottom:10px;
+  padding: 5px 0 5px 5px;
+  border-left:5px solid #f60;
+  line-height: 1.3;
+  }
+  /* Shop Info画像 */
+  #mall .main img{
+  /* 左側にくるようにする */
+    float:left;
+  width:130px;
+  height: auto;
+  padding:5px;
+  border:1px solid #aaa;
+  margin-bottom: 10px;
+  }
+  #mall .infoBox{
+  /* 右側にくるようにする */
+  float: right;
+  /* 頻出 常に左側は固定したいから、右側は％で縮小する */
+  width:calc(100% - 160px);
+  }
+  /* table */
+  #mall .infoBox table{
+  /* tableの時はwidth:100%;を書く */
+    width:100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  }
+  #mall .infoBox th,.infoBox td{
+  border:1px solid #aaa;
+  padding:5px;
+  }
+  #mall .infoBox th{
+  font-weight: normal;
+  background:#eee;
+  width:30%;
+  }
+  #mall .infoBox td{
+  line-height: 1.3;
+  }
+  /* ---------- comment ---------- */
+  #mall .com{
+  /* floatを解除する */
+  clear:both;
+  width:100px;
+  padding:10px 5px;
+  text-align: center;
+  border-radius:50%;
+  background:#0cf;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color:#fff;
+  }
+  #mall .comment{
+  border:2px solid #0cf;
+  padding:10px;
+  }
+  
+  /*---- Sidebar ----*/
+  /*開発実績*/
+  #mall .sidebar h3{
+  background:#008ec2;
+  color:#fff;
+  padding:10px;
+  font-size:16px;
+  }
+  #mall .sidebar h3 span{
+  /* 左側に棒を作るためにspanで囲んだ */
+  border-left:3px solid #fff;
+  padding-left: 7px;
+  }
+  #mall .sidebar ul{
+  background:#cef;
+  padding:20px;
+  margin-bottom: 30px;
+  }
+  #mall .sidebar ul li a{
+  display: block;
+  padding:10px;
+  color:#333;
+  border-top:1px dotted #555;
+  }
+  #mall .sidebar ul li:first-child a{
+  border-top:none;
+  }
+  #mall .sidebar ul li a:hover{
+  background:#0695d7;
+  color:#fff;
+  }
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (max-width: 767px) {
+  /* 2カラムを1カラムにする */
+  #mall section .container {
+  display: block;
+  }
+  #mall .main, #mall .sidebar{
+    width: auto;
+  }
+
+  #mall h2 + .container {
+    padding: 20px 10px 30px;
+  }
+  #mall .main section{
+  margin-bottom: 20px;
+  }
+  #mall .main h3 {
+  margin-bottom: 10px;
+  }
+  /*---- Sidebar ----*/
+  #mall .sidebar ul{
+  margin-bottom: 20px;
+  }
+  #mall .sidebar img {
+  display: block;
+  margin: 0 auto;
+  }
+}
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (max-width: 600px) {
+#mall .main img {
+display: block;
+float:none;
+width: 300px;
+height: auto;
+margin: 0 auto;
+box-sizing: border-box;
+}
+#mall .infoBox{
+float:none;
+width: auto;
+margin-bottom: 10px;
+}
+}
+
+
+  /* 汐留 */
+  #mall.shiodome h2{
+  background: url(../img/shiodome-header.jpg) no-repeat center/cover;
+  }
+  #mall.shiodome .main h3{
+  background-color :#ddf;
+  }
+  #mall.shiodome .sidebar ul {
+  background-color: #ddf;
+  }

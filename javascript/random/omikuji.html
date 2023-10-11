@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ランダムに運勢を表示</title>
+
+  <style>
+    .luck {
+      color: #f00;
+      font-size: 40px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <h1>ランダムに運勢を表示</h1>
+  <p>ボタンを押すと運勢がランダムに表示</p>
+  <button onclick="result()">おみくじを引く</button>
+  <h2 id="ans">ここに運勢を表示</h2>
+
+  <script>
+    function result() {
+      const kuji = ['大吉', '中吉', '小吉', '吉', '末吉', '凶', '大凶'];
+      const rnd = Math.floor(Math.random() * kuji.length);
+      // console.log(rnd);
+      const element = document.getElementById('ans');
+      // console.log(element);
+
+      // element.textContent = kuji[rnd];
+      if (rnd === 0) {
+        element.textContent = `${kuji[rnd]}!!!  おめでとう！！`;
+        element.classList.add("luck");
+        // element.style.color ="#f00";
+        // element.style.fontSize = "40px";
+      } else {
+        element.textContent = kuji[rnd];
+        element.classList.remove("luck");
+        // element.style = "none";
+      }
+    }
+
+  </script>
+</body>
+
+</html>

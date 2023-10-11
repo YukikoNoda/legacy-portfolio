@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, p, ul, li {
+  margin:0;
+  padding:0;
+  line-height:1;
+  font-family: 'Crimson Text', serif;
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+img{
+  max-width:100%;
+  height:auto;
+  border:none;
+  vertical-align:bottom;
+}
+
+/* ---------- 共通css ---------- */
+body, a {
+  color: #2d2d2d;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+/* ---------- Main Visual ---------- */
+/* heightをvhで指定で、画面の高さを基準にした高さ */
+.mainvisual {
+  height: 50vh;
+  background: url(http://placehold.jp/1920x900.png) no-repeat center/cover;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 18px;
+  margin-bottom: 30px;
+}
+header a:hover {
+  opacity: 0.6;
+} 
+h1 {
+  width: 110px;
+  line-height: 1px; /* これを書かないと高さがずれる */
+  margin-right: 40px;
+}
+h1 a {
+  display: block;
+}
+header ul {
+  display: flex;
+}
+header li {
+  font-size: 14px;
+  margin-right: 25px;
+}
+header li:last-child {
+  margin-right: 0;
+}
+
+/* ---------- Concept / Work ---------- */
+.content .img {
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+/*
+「display: inline-block;」改行し、margin-bottomが使用可能
+※文章ではないためspanタグを選択
+*/
+.section-title-sub {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.content {
+  margin-bottom: 60px;
+}
+.content p {
+  line-height: 1.7;
+}
+/*
+Workはそのまま画像とテキストを縦に並べると、テキスト→画像の順番になる
+「flex-direction: column-reverse;」で逆順にする
+*/
+#work {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+footer .logo {
+  width: 110px;
+}
+
+/* ********** Media Query ********** */
+@media screen and (min-width: 768px) {
+
+  /* Main Visual */
+  /* widthをvwで指定することで、画面幅を基準にした横幅に */
+  .mainvisual {
+    width: 90vw;
+    margin: 4% auto 0;
+  }
+
+  /* Header */
+  header {
+    width: 90vw;
+    padding: 32px 0;
+    margin: 0 auto 30px;
+  }
+
+  /* Contents */
+  h2 {
+    font-size: 24px;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+  }
+  .content .img {
+    width: 50%;
+  }
+  .content .text {
+    width: 50%;
+    padding: 0 7%;
+    box-sizing: border-box;
+  }
+  #work {
+    flex-direction: row;
+  }
+}

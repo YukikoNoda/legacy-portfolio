@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アコーディオンパネル演習</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>アコーディオンパネル演習</h1>
+    <dl>
+      <dt>パネル１</dt>
+      <dd>アコーディオンパネルの内容は文書だけではなく画像も入れ込めます</dd>
+
+      <dt>パネル２</dt>
+      <dd><img src="img/image01.jpg" alt="">
+        <p>マンゴーをふんだんに使ったフルーツケーキ♪</p>
+      </dd>
+      <dt>パネル３</dt>
+      <dd>
+        <p><img src="img/image02.jpg" alt=""></p>
+        <p>見た目もかわいいチョコカップケーキ</p>
+      </dd>
+    </dl>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // 一番最初のddだけ表示する
+    // $('dd:not(:first-of-type)').hide();
+    $('dd:nth-of-type(n+2)').hide();
+
+    $(function () {
+      $('dt').on('click', function () {
+
+        // クリックしたdtにclass名「select」がついているか判定
+        if ($(this).hasClass('select') === false) {
+          // ついていない場合に動作する
+
+          // 1.全部のddをslideUp
+          $('dd').slideUp();
+
+          // 2.実際にクリックした次の要素をDown
+          $(this).next().slideDown();
+
+          //３. 全部のdtからclass名「select」を削除
+          $('dt').removeClass('select');
+
+          //４. clickしたdtにclass名「select」を追加
+          $(this).addClass('select');
+
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

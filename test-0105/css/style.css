@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, ul, li {
+margin:0;
+padding:0;
+line-height: 1;
+font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+list-style: none;
+}
+a {
+text-decoration: none;
+color: inherit;
+}
+img {
+max-width: 100%;
+height:auto;
+border: none;
+vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+.container {
+max-width: 767px;
+margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+header {
+padding: 20px 0 0;
+border-bottom: 2px solid #aaa;
+width: 100%;
+}
+.header-inner {
+margin-bottom: 20px;
+padding:0 20px;
+}
+header h1 {
+text-align: center;
+}
+
+/* ---------- Menu Button ---------- */
+.sp-btn {
+position: absolute;
+top: 10px;
+right: 20px;
+width: 50px;
+line-height: 50px;
+border: 2px solid #aaa;
+border-radius: 5px;
+box-sizing: border-box;
+color: #aaa;
+font-size: 13px;
+font-weight: bold;
+text-align: center;
+cursor: pointer;
+}
+
+.sp-btn.open {
+border-color: #000;
+background: #000;
+color: #fff;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+position: relative;
+z-index: 5000;
+}
+nav ul {
+display: none;
+position: absolute;
+top: 2px;
+width: 100%;
+}
+nav li {
+text-align: center;
+border-bottom: 1px solid #aaa ;
+background: rgba(255, 255, 255, 0.7);
+font-weight: bold;
+line-height: 50px;
+}
+nav a {
+display: block;
+}
+
+/* ---------- Main Content ---------- */
+main {
+padding: 20px 0;
+}
+h2 {
+padding-left: 20px;
+margin-bottom: 20px;
+}
+
+.main-visual li {
+height: 300px;
+}
+.image01 {
+background: url(../img/image01.jpg) no-repeat center/cover;
+}
+.image02 {
+background: url(../img/image02.jpg) no-repeat center/cover;
+}
+.image03 {
+background: url(../img/image03.jpg) no-repeat center/cover;
+}
+.image04 {
+background: url(../img/image04.jpg) no-repeat center/cover;
+}
+.bx-wrapper {
+margin-bottom: 40px;
+box-shadow: none;
+border: none;
+}
+
+.modal {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 20px;
+}
+.modal li{
+width: 45%;
+margin-bottom: 7%;
+}
+/* ---------- Footer ---------- */
+footer {
+width: 100%;
+padding: 20px 0;
+background: #000;
+color: #fff;
+text-align: center;
+}
+
+
+/* ---------- Media Query ---------- */
+@media screen and (min-width:768px) {
+.container {
+max-width: 960px;
+}
+/* Header */
+header .container {
+display: flex;
+justify-content: space-between;
+}
+
+/* Navigation */
+.sp-btn {
+display: none;
+}
+nav ul{
+display: flex;
+position: static;
+width: auto;
+}
+nav li {
+margin-right: 20px;
+border: none;
+}
+nav a:hover {
+ color: #aaa;
+}
+
+/* Main Content */
+.modal li{
+width: 23%;
+}
+
+}

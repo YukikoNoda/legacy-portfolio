@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Image</title>
+  <meta name="description" content="ヒーローイメージの練習サイトです。">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1><img src="img/icon.svg" alt="ロゴ画像"></h1>
+  </header>
+
+  <!-- Button -->
+  <div class="btn">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+  </div><!-- /.btn -->
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#"><i class="fas fa-user-edit"></i>About Us</a></li>
+      <li><a href="#"><i class="fas fa-camera-retro"></i>Photos</a></li>
+      <li><a href="#"><i class="fas fa-map-marked-alt"></i>Map</a></li>
+      <li><a href="#"><i class="fas fa-shopping-bag"></i>Shop</a></li>
+      <li><a href="#"><i class="fab fa-telegram-plane"></i>Contact</a></li>
+    </ul>
+  </nav><!-- /.spnav -->
+  <!-- トップへ戻る -->
+  <p class="top"><i class="fas fa-caret-up"></i>Top</p>
+
+  <div class="container">
+    <section class="ph topL">
+      <a href="#" class="caption">
+        <h2><i class="fas fa-chevron-right"></i>About Us</h2>
+        <p>ロンドンで撮影した画像と思い出をご紹介するサイトです。見るだけでわくわくがいっぱい。あなたもきっと行きたくなる！</p>
+      </a>
+    </section>
+
+    <section class="ph topR">
+      <a href="#" class="caption">
+        <h2><i class="fas fa-chevron-right"></i>Sightseeing</h2>
+        <p>せっかくロンドンに来たのであれば、観光をしたいですよね。コチラのページでは、おすすめの観光スポットBEST10をご紹介します♪</p>
+      </a>
+    </section>
+
+    <section class="ph btmL">
+      <a href="#" class="caption">
+        <h2><i class="fas fa-chevron-right"></i>Map</h2>
+        <p>一日のタイムスケジュール&観光ルートをご紹介します。</p>
+      </a>
+    </section>
+
+    <section class="ph btmM">
+      <a href="#" class="caption">
+        <h2><i class="fas fa-chevron-right"></i>Shop</h2>
+        <p>ロンドンにはたくさんの素敵なお店があります！おすすめのお店をご紹介します。</p>
+      </a>
+    </section>
+
+    <section class="ph btmR">
+      <a href="#" class="caption">
+        <h2><i class="fas fa-chevron-right"></i>Contact</h2>
+        <p>このサイトに関して何かご質問やご依頼がありましたら、お声がけください。</p>
+      </a>
+    </section>
+  </div><!-- /.container -->
+
+  <!-- Main Content -->
+  <main>
+    <section class="welcome">
+      <h2>Welcome</h2>
+
+      <p>
+        イギリスの写真や、観光スポットを紹介するフォトサイトです！<br>
+        おすすめ観光スポット、ショッピング、アミューズメントなどの<br>様々な記事を投稿しております。
+      </p>
+
+      <div class="service">
+        <section>
+          <a href="#">
+            <i class="fas fa-camera"></i>
+            <h3>PHOTO</h3>
+            <p>
+              インスタ映えする観光スポット！昼と夜では景色が全然違います。おすすめの観光スポットをご紹介♪
+            </p>
+          </a>
+        </section>
+        <section>
+          <a href="#">
+            <i class="fas fa-plane"></i>
+            <h3>PLAN</h3>
+            <p>あなたにピッタリのおすすめの旅行計画をスケジューリング！</p>
+          </a>
+        </section>
+        <section>
+          <a href="#">
+            <i class="fas fa-user-alt"></i>
+            <h3>CONTACT</h3>
+            <p>ご不明な点がございましたら、お問い合わせ下さい。</p>
+          </a>
+        </section>
+      </div>
+    </section>
+
+    <section class="access">
+      <div class="head">
+        <h2>Access</h2>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.7654540336753!2d139.7113587370706!3d35.72598032494587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6b8b0de7dd%3A0xd184e022fc8bf0e6!2z5qCq5byP5Lya56S-44OV44Kh44Km44Oz44OH44O844K344On44Oz44OV44Kn44Oq44KrVEE!5e0!3m2!1sja!2sjp!4v1642405926330!5m2!1sja!2sjp"
+          allowfullscreen="" loading="lazy"></iframe>
+      </div><!-- /.map -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p><small>Copyright &copy; 2020 All rights reserved.</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('.btn').on('click', function () {
+        $(this).toggleClass('close');
+        $('nav').slideToggle();
+      });
+
+      // Topへ戻るボタン
+      const Top = $('.top');
+      //ボタンを非表示
+      Top.hide();
+      //300pxスクロールで表示、以下で非表示
+      $(window).on('scroll', function () {
+        if ($(this).scrollTop() > 300) {
+          Top.fadeIn();
+        } else {
+          Top.fadeOut();
+        }
+      });
+      // ボタンクリックでトップへ戻る
+      Top.on('touchstart click', function () {
+        $('html,body').animate({ scrollTop: 0 }, 'swing')
+      });
+    });
+  </script>
+</body>
+
+</html>

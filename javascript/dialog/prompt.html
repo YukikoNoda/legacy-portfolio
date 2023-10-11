@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>promptダイアログ</title>
+</head>
+
+<body>
+<h1>promptダイアログ</h1>
+<button onclick="view()">ダイアログを表示</button>
+
+<script>
+function view(){
+  // promptダイアログ
+  const ans = prompt('文字を入力して下さい。');
+
+  // 1.OK もしくは CANCEL
+  if (ans === null){
+    alert('CANCELが押されました')
+  }else{
+    // 入力されているか、いないか
+    if( ans === ''){
+    alert('値を入力してください');
+    }else{
+    alert('あなたが入力した値は' + ans);
+    }
+  }
+}
+</script>
+</body>
+
+</html>

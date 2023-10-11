@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>アコーディオンの練習</title>
+  <meta name="description" content="アコーディオンの練習サイトです">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>アコーディオンの練習</h2>
+      <ul>
+        <li>
+          <h2>１．タイトル</h2>
+          <div class="detail">
+          <dl>
+            <dt>サブタイトル</dt>
+            <dd>テキストテキストテキストテキスト</dd>
+          </dl>
+          </div><!-- /.detail -->
+        </li>
+        <li>
+          <h2>２．タイトル</h2>
+          <div class="detail">
+          <dl>
+            <dt>サブタイトル</dt>
+            <dd>テキストテキストテキストテキスト</dd>
+          </dl>
+          </div><!-- /.detail -->
+        </li>
+        <li>
+          <h2>３．タイトル</h2>
+          <div class="detail">
+          <dl>
+            <dt>サブタイトル</dt>
+            <dd>テキストテキストテキストテキスト</dd>
+          </dl>
+          </div><!-- /.detail -->
+        </li>
+      </ul>
+  </div><!-- /.container -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('h2').on("click", function () {
+        // h2の次の要素（.detail）の表示・非表示を切り替える
+        $(this).next().slideToggle();
+        // openクラスの追加、削除でラベルの「－」と「＋」の切り替え
+        $(this).toggleClass("open");
+      });
+    });
+  </script>
+</body>
+
+</html>

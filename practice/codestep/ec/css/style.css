@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, p, ul, li, table, th, td {
+  margin:0;
+  padding:0;
+  line-height:1;
+  font-family: 'Raleway', sans-serif;
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+img{
+  max-width:100%;
+  height:auto;
+  border:none;
+  vertical-align:bottom;
+}
+table {
+  border-collapse: collapse;
+}
+
+/* ---------- 共通css ---------- */
+body, a {
+  color: #333;
+  font-size: 12px;
+}
+
+/* ---------- Header ---------- */
+header {
+  padding: 36px 16px 16px;
+}
+h1 {
+  width: 109px;
+  margin: 0 auto 26px;
+}
+h1 a {
+  display: block;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* 横スクロールできるようにする */
+  overflow-x: scroll;
+}
+nav .menu, nav .login {
+  display: flex;
+}
+nav .menu li {
+  margin-right: 30px;
+}
+nav .login li {
+  margin-left: 30px;
+}
+
+/* ---------- Main Content ---------- */
+main {
+  margin-bottom: 100px;
+}
+.item-image{
+  margin: 0 0 10px;
+}
+.item-info {
+  padding: 0 16px;
+}
+.item-info p {
+  margin-bottom: 30px;
+  line-height: 1.9;
+  text-align: justify;
+}
+.item-info h2 {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-top: solid 1px #c3c3c3;
+  border-bottom: solid 1px #c3c3c3;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 60px;
+}
+
+/* ---------- order-table ---------- */
+.item-info .order-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.item-info .order-table .color,
+.item-info .order-table .size {
+  width: 20%;
+}
+.item-info .order-table .quantity {
+  width: 60%;
+}
+.item-info .order-table td {
+  border-top: solid 1px #c3c3c3;
+}
+.item-info .order-table th,
+.item-info .order-table td {
+  padding: 10px;
+  border-right: solid 1px #c3c3c3;
+  font-weight: normal;
+  text-align: center;
+}
+.item-info .order-table th:last-child,
+.item-info .order-table td:last-child {
+  border-right: none;
+}
+/*
+-moz-appearance: menulist;
+-webkit-appearance: menulist;
+セレクトボックスに右端の矢印を表示?
+*/
+.item-info .order-table select {
+  width: 100%;
+  padding: 0 10px;
+  border: solid 1px #c3c3c3;
+  /* -moz-appearance: menulist; */
+  /* -webkit-appearance: menulist; */
+}
+
+/* ---------- Button ---------- */
+.item-info .cart-btn {
+  display: block;
+  margin-bottom: 30px;
+  padding: 18px 0;
+  background-color: #4B4B4B;
+  color: #fff;
+  text-align: center;
+}
+
+/* ---------- size-table ---------- */
+.item-info .size-table {
+  width: 100%;
+  border-top: solid 1px #c3c3c3;
+  border-left: solid 1px #c3c3c3;
+}
+.item-info .size-table .size {
+  width: 16%;
+}
+.item-info .size-table .chest,
+.item-info .size-table .weist,
+.item-info .size-table .height {
+  width: 28%;
+}
+.item-info .size-table th {
+  background-color: #ecebeb;
+}
+.item-info .size-table th,
+.item-info .size-table td {
+  padding: 10px;
+  border-right: solid 1px #c3c3c3;
+  border-bottom: solid 1px #c3c3c3;
+  font-weight: normal;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+
+/* ********************
+  Media Query
+******************** */
+@media screen and (min-width:768px) {
+
+  /* ---------- 共通css ---------- */
+  .container {
+    max-width: 960px;
+    padding: 0 3%;
+  }
+  
+  /* ---------- Header ---------- */
+  header {
+    max-width: 900px;
+    padding: 46px 4% 26px;
+    margin: 0 auto 50px auto;
+    border-bottom: solid 1px #c3c3c3;
+  }
+
+  /* ---------- Navigation ---------- */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .menu,
+  nav .login {
+    display: flex;
+    align-items: center;
+  }
+  nav .menu li {
+    margin-right: 14px;
+  }
+  nav .login li {
+    margin-left: 14px;
+  }
+  nav a:hover {
+    opacity: 0.6;
+  }
+
+  /* ---------- Main Content ---------- */
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 100px;
+  }
+  /* flex-box時に使用(デフォルト 1)
+  flex-shrink: 0; 画像が縮小されない
+  その分別の子要素が縮小する */
+  .item-image {
+    max-width: 400px;
+    flex-shrink: 0;
+    margin: 0 60px 0 0;
+  }
+  .item-info {
+    padding: 0;
+  }
+  .cart-btn:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自然の森公園</title>
+  <meta name="description" content="自然の森公園では、四季折々の自然に出会うことができます。">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="css/style-grid.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=New+Tegomin&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>自然の森公園</h1>
+
+    <!-- PC Navigation -->
+    <nav class="g-nav">
+      <ul>
+        <li><a href="#" class="current">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">EVENT</a></li>
+        <li><a href="#">ACCESS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SP Button -->
+  <div class="btn">
+    <i class="fas fa-angle-double-down"></i>
+    <i class="fas fa-angle-double-up"></i>
+  </div><!-- /.btn -->
+
+  <!-- Main Content -->
+  <main>
+      <ul class="container">
+        <li><a href="#"><img src="img/bird.jpg" alt="#"><span>Bird watching</span></a></li>
+        <li><a href="#"><img src="img/mushroom.jpg" alt="#"><span>Plant</span></a></li>
+        <li><a href="#"><img src="img/fox.jpg" alt="#"><span>Animal</span></a></li>
+        <li><a href="#"><img src="img/flower.jpg" alt="#"><span>Flower</span></a></li>
+        <li><a href="#"><img src="img/leaf.jpg" alt="#"><span>MAP</span></a></li>
+        <li><a href="#"><img src="img/tree.jpg" alt="#"><span>Season</span></a></li>
+        <li><a href="#"><img src="img/rabit.jpg" alt="#"><span>Photo</span></a></li>
+      </ul>
+  </main>
+
+  <!-- Footer   -->
+  <footer>
+    <p><small>Copyright 2021 All rights reserved.</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $('.btn').on('click touchstart', function () {
+      $(this).toggleClass('up');
+      $('.g-nav').slideToggle();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile First2</title>
+  <meta name="description" content="Mobile Firstの練習サイトです">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div>
+        <h1>Mobile First</h1>
+        <p>This site is coded in mobile first.</p>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">ACCESS</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div><!-- /.container -->
+
+    <!-- SP Button -->
+    <div class="btn">
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-angle-double-right"></i>
+    </div>
+  </header>
+
+  <!-- トップへ戻る -->
+  <p class="top"><i class="fas fa-caret-up"></i>Top</p>
+
+  <!-- Key Visual -->
+  <div class="keyVis">
+    <p>Key Visual</p>
+    <a href="#"><i class="fab fa-facebook-square"></i></a>
+    <a href="#"><i class="fab fa-twitter-square"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section>
+      <a href="#">
+        <h2>Content1</h2>
+        <img src="img/image01.jpg" alt="画像1">
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.<br>
+          Voluptatem accusantium doloremque laudantium.
+        </p>
+        <p class="more"><i class="fas fa-caret-right"></i>more</p>
+      </a>
+    </section>
+
+    <section>
+      <a href="#">
+        <h2>Content2</h2>
+        <img src="img/image02.jpg" alt="画像2">
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.<br>
+          Voluptatem accusantium doloremque laudantium.
+        </p>
+        <p class="more"><i class="fas fa-caret-right"></i>more</p>
+      </a>
+    </section>
+
+    <section>
+      <a href="#">
+        <h2>Content3</h2>
+        <img src="img/image03.jpg" alt="画像3">
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.<br>
+          Voluptatem accusantium doloremque laudantium.
+        </p>
+        <p class="more"><i class="fas fa-caret-right"></i>more</p>
+      </a>
+    </section>
+  </main>
+
+  <!-- Map -->
+  <div class="g-map">
+    <iframe class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.8292133674095!2d135.7588824!3d34.98594240000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108ae918b02ef%3A0xb61a446e74a21c08!2z5Lqs6YO96aeF!5e0!3m2!1sja!2sjp!4v1642669588502!5m2!1sja!2sjp"
+      loading="lazy"></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><small>Copyright &copy; 2021 All rights reserved.</small></p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // touchstartでも可能
+    $(function () {
+      $('.btn').on('click', function () {
+        $(this).toggleClass('open');
+        $('nav').toggleClass('slide');
+      });
+    });
+
+    //変数宣言
+    const Top = $('.top');
+    //ボタンを非表示
+    Top.hide();
+    //300pxスクロールで表示、以下で非表示
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 300) {
+        Top.fadeIn();
+      } else {
+        Top.fadeOut();
+      }
+    });
+    // ボタンクリックでトップへ戻る
+    Top.on('touchstart click', function () {
+      $('html,body').animate({ scrollTop: 0 }, 'swing')
+    });
+  </script>
+</body>
+
+</html>

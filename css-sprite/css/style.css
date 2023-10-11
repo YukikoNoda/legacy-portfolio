@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, ul, li {
+margin: 0;
+padding: 0;
+line-height: 1;
+}
+ul{list-style: none;}
+a{text-decoration: none;}
+
+
+/* ---------- 共通css ---------- */
+.container {
+width: 800px;
+margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.header {
+padding:30px;
+text-align: center;
+}
+.header h1 {
+font-size:30px;
+}
+
+/* ---------- Navigation ---------- */
+.g-nav {
+display: flex
+}
+.g-nav li {
+width: 160px;
+height:50px;
+text-align: center;
+}
+.g-nav li a {
+display: block;
+padding:17px 0;
+
+/* 隠し文字設定 */
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+}
+
+/* ---------- 個別設定 ---------- */
+.g-nav li.home {
+background: url(../img/css_sprite.jpg) no-repeat 0 0;
+}
+.g-nav li.food {
+background: url(../img/css_sprite.jpg) no-repeat -160px 0;
+}
+.g-nav li.drink {
+background: url(../img/css_sprite.jpg) no-repeat -320px 0;
+}
+.g-nav li.info {
+background: url(../img/css_sprite.jpg) no-repeat -480px 0;
+}
+.g-nav li.contact {
+background: url(../img/css_sprite.jpg) no-repeat -640px 0;
+}
+
+/* ---------- hover時 ---------- */
+.g-nav li.home:hover {
+background-position: 0 -50px;
+}
+.g-nav li.food:hover {
+background-position: -160px -50px;
+}
+.g-nav li.drink:hover {
+background-position: -320px -50px;
+}
+.g-nav li.info:hover {
+background-position: -480px -50px;
+}
+.g-nav li.contact:hover {
+background-position: -640px -50px;
+}
+
+
+
+
+
+
+
+

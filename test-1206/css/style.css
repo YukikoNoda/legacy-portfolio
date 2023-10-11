@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, h3, p, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Flex-box */
+.pcnav ul, .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  width: calc(100% * (630 / 960));
+}
+.sidebar {
+  width: calc(100% * (300 / 960));
+}
+
+/* header, footer */
+header, footer {
+  background: #365699;
+  color: #fff;
+}
+
+/* ---------- Header ---------- */
+header .container {
+  padding: 20px 0;
+}
+h1 {
+  padding-left: 60px;
+  background: url(../img/logo.png) no-repeat left center;
+  line-height: 50px;
+}
+header p {
+  padding-left: 60px;
+  font-weight: bold;
+}
+
+/* ---------- Navigation ---------- */
+.pcnav {
+  background: linear-gradient(to bottom, #dbdefd, #aeb5e3);
+}
+.pcnav li {
+  width: calc(100% / 5);
+  color: #365699;
+  line-height: 44px;
+  text-align: center;
+}
+.pcnav a {
+  display: block;
+}
+.pcnav a:hover {
+  background: linear-gradient(to top, #dbdefd, #aeb5e3);
+}
+
+/* ---------- Key Visual ---------- */
+.keyVis {
+  padding: 100px 0;
+  background: url(../img/mall_bg2.jpg) no-repeat center top/cover;
+}
+.keyVis {
+  color: #fff;
+  font-size: 2.5em;
+  line-height: 1.7;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+
+/* ********** Contents ********** */
+.wrap {
+  padding: 30px 0;
+}
+h2 {
+  margin-bottom: 20px;
+  padding-left: 5px;
+  border-left: 24px solid #365699;
+}
+
+/* ---------- Main Content ---------- */
+h3 {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #365699;
+  color: #fff;
+}
+
+/* Float処理 */
+main section section {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+main img {
+  float: left;
+  margin-right: 10px;
+}
+main section section p:first-of-type {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* 詳細を見る */
+main a {
+  padding-left: 21px;
+  background: url(../img/arrow.png) no-repeat left center;
+  color: #00f;
+}
+main a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar dt {
+  margin-bottom: 10px;
+  color: #c00;
+  font-weight: bold;
+}
+.sidebar dd {
+  margin-bottom: 25px;
+  padding-left: 30px;
+  line-height: 1.3;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 30px 0;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>if文の練習</title>
+</head>
+
+<body>
+  <h1>if文の練習</h1>
+<p id = "ans">結果を表示</p>
+<button onclick = "kakunin()">確認</button>
+<ul>
+  <li>年齢が10歳未満の場合、「このアトラクションはご乗車できません」</li>
+  <li>10歳以上の場合、「お楽しみください」</li>
+  <li>25歳以上の場合、「頭上にご注意してお楽しみください」</li>
+</ul>
+
+<script>
+function kakunin(){
+  let age = prompt('年齢を入力して下さい');
+  age = parseInt(age);
+  //DOMの取得
+  const element = document.getElementById('ans');
+
+  if(isNaN(age) || age < 0){
+    element.textContent = '0歳以上の年齢を半角数字で入力してください';
+  } else if( age >= 25){
+    element.textContent = '頭上にご注意してお楽しみください';
+  }else if( age >= 10 ){
+    element.textContent = 'お楽しみください';
+  }else{
+    element.textContent = 'このアトラクションはご乗車できません';
+  }
+}
+
+</script>
+</body>
+</html>

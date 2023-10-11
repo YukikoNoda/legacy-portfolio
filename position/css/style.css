@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+/* ---------- 共通css ---------- */
+header, footer {
+  padding: 20px;
+  background: #fcc;
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
+header {
+  color: #900;
+}
+h1 {
+  margin-bottom: 15px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+/* ---------- Main Content ---------- */
+main {
+  padding: 50px 0;
+}
+.container {
+  position: relative;
+  width: 1000px;
+  height: 800px;
+  margin: 0 auto;
+}
+.container img {
+  position: absolute;
+}
+.lily {
+  top: 200px;
+  left: 300px;
+}
+.yellow {
+  top: 100px;
+  left: 150px;
+}
+.lotus {
+  top: 50px;
+  left: 400px;
+}
+.sunflower {
+  left: 400px;
+  bottom: 50px;
+}
+.magnolia {
+  top: 100px;
+  right: 150px;
+}
+.hydrangea {
+  right: 150px;
+  bottom: 100px;
+}
+.hybiscus {
+  bottom: 100px;
+  left: 150px;
+}

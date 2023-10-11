@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: bottom;
+}
+
+/* ---------- 共通css ---------- */
+.container {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+main {
+  width: calc(100% * 630/960);
+}
+.sidebar {
+  width: calc(100% * 300/960);
+}
+
+/* ---------- Header ---------- */
+header.container {
+  padding: 10px;
+  align-items: center;
+}
+h1 {
+  background: url(../img/logo.png) no-repeat left center;
+  line-height: 46px;
+  /* 隠し文字 */
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ---------- Key Visual ---------- */
+.keyVis {
+  padding: 120px 0;
+}
+.img01{
+  background: url(../img/sofa.jpg) no-repeat center/cover;
+}
+.img02 {
+  background: url(../img/image02.jpg) no-repeat top center/cover;
+}
+.img03 {
+  background: url(../img/image03.jpg) no-repeat top center/cover;
+}
+.keyVis .container {
+  display: block;
+  color: #fff;
+  font-size: 44px;
+  font-family: 'Italianno', cursive;
+  text-shadow: 2px 2px 2px #900;
+}
+.keyVis span {
+  display: block;
+  font-size: 100px;
+}
+
+/* ---------- PC Navigation ---------- */
+.btn, .spnav {
+  display: none;
+}
+.pcnav {
+  background: url(../img/btn_bg.png) repeat-x left top;
+}
+.pcnav li {
+  width: calc(100% / 5);
+  line-height: 44px;
+  font-size: 14px;
+  text-align: center;
+}
+.pcnav a {
+  display: block;
+  border-right: 1px solid #fff;
+  color: #fff;
+}
+.pcnav li:first-child a {
+  border-left: 1px solid #fff;
+}
+.pcnav a:hover {
+  background: url(../img/btn_bg.png) repeat-x left bottom;
+}
+
+/* ********** Contents ********** */
+.wrap {
+  padding: 30px 10px 40px;
+}
+h2 {
+  margin-bottom: 10px;
+  color: #900;
+  font-size: 28px;
+}
+
+/* ---------- Main Content ---------- */
+main h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #aaa;
+}
+main p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+main section p:first-of-type {
+  color: #d30;
+  font-size: 20px;
+  font-weight: bold;
+}
+main img {
+  border: 10px solid #bd0202;
+  box-sizing: border-box;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar section:first-child {
+  margin-bottom: 50px;
+}
+.sidebar li {
+  line-height: 44px;
+}
+.sidebar ul a {
+  display: block;
+  padding-left: 30px;
+  background: url(../img/listmark.png) no-repeat 10px center;
+  border-bottom: 1px solid #aaa;
+}
+.sidebar ul li:first-child a {
+  border-top: 1px solid #aaa;
+}
+.sidebar ul a:hover {
+  background-color: #fdc;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 30px 0;
+  background: #d30;
+  color: #fff;
+}
+
+
+/* ********** Media Query ********** */
+@media screen and (max-width:767px) {
+
+  /* 共通css */
+  .container {
+    display: block;
+  }
+  main, .sidebar {
+    width: auto;
+  }
+
+  /* Header */
+  h1 {
+    background-position: center;
+  }
+  header p {
+    display: none;
+  }
+
+  /* Key Visual */
+  .keyVis {
+    padding: 30px 0;
+    text-align: center;
+  }
+  .keyVis .container {
+    font-size: 35px;
+  }
+  .keyVis span {
+    font-size: 75px;
+  }
+
+  /* Hamburger */
+  .btn {
+    display: block;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border: 1px solid #900;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+  }
+  .btn i {
+    color: #900;
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .close i:first-child {
+    display: none;
+  }
+
+  /* SP Navigation */
+  .pcnav {
+    display: none;
+  }
+  .spnav {
+    display: block;
+    position: fixed;
+    top: 57px;
+    left: 100%;
+    width: 100%;
+    transition: 300ms;
+  }
+  .slide {
+    left: 0;
+  }
+  .spnav li {
+    text-align: center;
+    font-size: 24px;
+    line-height: 70px;
+  }
+  .spnav a {
+    display: block;
+    border-bottom: 1px solid #fff;
+    background: rgba(200, 50, 0, 0.8);
+    color: #fff;
+  }
+
+  /* Contents */
+  .wrap {
+    padding: 20px 10px;
+  }
+  main {
+    margin-bottom: 20px;
+  }
+  h2 {
+    text-align: center;
+  }
+  main p, main section p:first-of-type {
+    font-size: 14px;
+  }
+  main img, .sidebar img {
+    display: block;
+    margin: 20px auto;
+  }
+
+  /* Category */
+  .sidebar section:first-child {
+    margin-bottom: 20px;
+  }
+  .sidebar li a {
+    padding-left: 40px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-position: left 20px center;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 15px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* ---------- リセットcss ---------- */
+html, body, h1, p, ul, li {
+  margin:0;
+  padding:0;
+  line-height:1;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+}
+ul{
+  list-style:none;
+}
+a{
+  text-decoration:none;
+}
+img{
+  max-width:100%;
+  height:auto;
+  border:none;
+  vertical-align:bottom;
+}
+
+/* ---------- 共通css ---------- */
+body, a {
+  color: #2b2a27;
+  text-align: center;
+}
+
+/* ---------- Main Visual ---------- */
+/*「width: 100%;」「height: 100vh;」全画面表示*/
+.mainvisual {
+  height: 100vh;
+  background: url(http://placehold.jp/1920x1280.png) no-repeat center/cover;
+  margin-bottom: 80px;
+}
+
+/* ---------- Concept Text ---------- */
+.concept-text h1 {
+  margin-bottom: 20px;
+}
+.concept-text p {
+  padding: 0 20px;
+  margin-bottom: 80px;
+  line-height: 1.7;
+}
+/*「display: inline-block;」aタグに幅と高さを持たせる。*/
+.btn {
+  display: inline-block;
+  margin-bottom: 80px;
+  padding: 18px 60px;
+  border:  1px solid #2b2a27;
+  font-size: 14px;
+}
+
+/* ---------- Image ---------- */
+.flex {
+  margin-bottom: 60px;
+}
+/*「object-fit: cover;」高さを固定したまま画面幅に合わせて画像を伸縮, 3点セット*/
+.flex li img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  font-size: 12px;
+  padding: 20px;
+}
+/*リンクはul、liタグで記述*/
+footer ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+footer ul li {
+  margin: 0 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #2b2a27;
+}
+
+/* ---------- Media Query ---------- */
+@media screen and (min-width: 768px) {
+
+  .btn {
+    transition: 300ms;
+  }
+  .btn:hover {
+    background: #2b2a27;
+    color: #fff;
+  }
+
+  /* Image */
+  .flex {
+    display: flex;
+  }
+  .flex li {
+    width: calc(100% / 3);
+  }
+
+  /* Footer */
+  footer ul a {
+    transition: 300ms;
+  }
+  footer ul a:hover {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THAI-NAMA|タイ風家庭料理のお店</title>
+  <meta name="description" content="THAI-NAMAはタイ風の家庭的な料理をご提供しているお店です。季節感を大切に、旬のものを使いつつ、楽しんで貰えるメニューを揃えています。">
+  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.ico">
+
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <h1>THAI-NAMA</h1>
+        <div class="sp-btn">MENU</div><!-- /.btn -->
+      </div><!-- /.header-inner -->
+
+      <!-- Navigation -->
+      <nav class="g-nav">
+        <ul>
+          <li><a href="#">concept</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">access</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </div><!-- /.container -->
+  </header>
+
+  <div class="container">
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Main Visual -->
+      <ul class="main-visual">
+        <li class="image01">生春巻き/鯛</li>
+        <li class="image02">エビチリ/海老</li>
+        <li class="image03">タイカレー/香草</li>
+      </ul><!-- /.main-visual -->
+
+      <p class="concept-text">THAI-NAMAは<br>
+        タイ風の家庭的な料理をご提供しているお店です。<br>
+        季節感を大切に、旬のものを使いつつ、楽しんで貰えるメニューを揃えています。</p>
+    </main>
+
+    <section class="sub-contents">
+      <h2>おすすめメニュー</h2>
+      <div class="menu">
+        <p><a href="img/sidemenu01.jpg" data-lightbox="image" data-title="フォー"><img src="img/sidemenu01.jpg" alt="サブメニュー画像１">フォー</a></p>
+        <p><a href="img/sidemenu02.jpg" data-lightbox="image" data-title="カオソーイ"><img src="img/sidemenu02.jpg" alt="サブメニュー画像２">カオソーイ</a></p>
+        <p><a href="img/sidemenu03.jpg" data-lightbox="image" data-title="ヤムウンセン"><img src="img/sidemenu03.jpg" alt="サブメニュー画像３">ヤムウンセン</a></p>
+      </div><!-- /.menu -->
+    </section>
+
+    <section class="article">
+      <h2>NEWS</h2>
+      <dl>
+        <dt>2020年02月21日</dt>
+        <dd>春の新作メニューを追加しました。</dd>
+        <dt>2020年01月16日</dt>
+        <dd>冬のメニューを追加しました。</dd>
+      </dl>
+    </section>
+  </div><!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <ul class="sub-nav">
+        <li><a href="#">concept</a></li>
+        <li><a href="#">menu</a></li>
+        <li><a href="#">access</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+
+      <div class="info">
+        <div class="address">
+          <p>〒150-0001　東京都渋谷区神宮前3-4-5 タイ生ビル1F</p>
+          <p>JR渋谷駅徒歩5分</p>
+          <p>JR原宿駅徒歩6分</p>
+          <p>副都心線、千代田線明治神宮前徒歩7分</p>
+        </div><!-- /.address -->
+
+        <div class="tel">
+          <p>TEL 03-1234-4567</p>
+          <p>reservation@thai-nama.net</p>
+        </div><!-- /.tel -->
+      </div><!-- /.info -->
+
+      <p class="copy"><small>Copyright 2021 THAI-NAMA All Right Reserved.</small></p>
+    </div><!-- /.container -->
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $('.sp-btn').on("touchstart", function () {
+        $(this).toggleClass('open');
+        $('.g-nav ul').slideToggle();
+      });
+    });
+  </script>
+
+  <script src="js/jquery.bxslider.js"></script>
+  <script>
+    $(function () {
+      $('.main-visual').bxSlider({
+        auto: true,
+        controls: false
+      });
+    });
+  </script>
+
+  <script src="js/lightbox.js"></script>
+
+</body>
+
+</html>
